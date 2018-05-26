@@ -19,15 +19,10 @@
   _Thêm nội dung vào!_
 ## 10. Chi tiết và ví dụ về phép toán ?
   _Thêm nội dung vào!_
-## 11. Chi tiết và ví dụ về phép toán ,
+## 11. Chi tiết và ví dụ về phép toán !
   _Thêm nội dung vào!_
-## 12. Chi tiết và ví dụ về phép toán >
+## 12. Chi tiết và ví dụ về phép toán \top
   _Thêm nội dung vào!_
-## 13. Chi tiết và ví dụ về phép toán ,
+## 13. Chi tiết và ví dụ về phép toán \perp
   _Thêm nội dung vào!_
-## 14. Chi tiết và ví dụ về phép toán !
-  _Thêm nội dung vào!_
-## 15. Chi tiết và ví dụ về phép toán ,
-  _Thêm nội dung vào!_
-## 16. Chi tiết và ví dụ về phép toán ? 
-  _Thêm nội dung vào!_
+  
