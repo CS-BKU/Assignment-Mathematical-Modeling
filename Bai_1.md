@@ -3,7 +3,16 @@
   Cụm từ "smart contacts" (hợp đồng thông minh) được đặt ra bỏi nhà khoa học máy tính Nick Szabo năm 1994 và đã được nghiên cứu qua nhiêu năm. Nguyên lý hoạt động của nó được Szabo mô tả năm 1996, rất lâu trước khi công nghệ blockchain ra đời. Theo quan niệm của Szabo, smart contracts là các giao thức để chuyển dịch thông tin sử dụng các thuật toán toán học để thực thi các giao dịch một cách tự động một khi thỏa đầy đủ các điều kiện và kiểm soát hoàn toàn quá trình này. Định nghĩa này đả đi trước thời đại đến 10 năm và vẫn còn đúng cho đến ngày nay. Nhưng vào những năm 1996, quan niệm về smart contracts vẫn chưa được thừa nhận vì các cộng nghệ cần thiết để vận hành chưa ra đời, đặc biệt là sổ cái phân tán (distributed ledger). <br />
   Vào năm 2008, Bitcoin, đồng tiền mã hóa đầu tiên, đã được tạo ra dựa trên cơ sở của công nghệ blockchain. Blockchain của Bitcoin không cho phép các điều kiện để kết thúc 1 giao dịch được quy định trên  một khối block mới vì nó chỉ chứa các thông tin giao dịch. Dù sao đi nữa, sự xuất hiện của blockchain đã trở thành nguồn động lực để phát triển smart contracts. Năm 2013, nền tảng blockchain Ethereum đã giúp cho việc đưa smart contracts và thực tế. Ngày nay, mặc dù thị trường đã cung cấp nhiều nền tảng cho phép sử dụng smart contracts nhưng Ethereum vẫn được sử dụng nhiều nhất. <br/>
 ## 2. Ứng dụng của hợp đồng thông minh
-  _Thêm nội dung vào!_
+### 2.1 Ứng dụng vào bảo hiểm
+  -Thêm vào-
+### 2.2 Ứng dụng trong chuỗi cung ứng   
+  -Thêm vào-
+### 2.3 Ứng dụng trong việc vay thế chấp
+  -Thêm vào-
+### 2.4 Ứng dụng trong hợp đồng việc làm
+  -Thêm vào-
+### 2.5 Ứng dụng trong bảo vệ nội dung bản quyền
+  -Thêm vào-
 ## 3. Lịch sử của "Linear Logic"
   _Thêm nội dung vào!_
 ## 4. Ứng dụng của "Linear Logic"
