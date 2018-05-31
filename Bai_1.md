@@ -14,7 +14,9 @@
 ### 2.5 Ứng dụng trong bảo vệ nội dung bản quyền
   -Thêm vào-
 ## 3. Lịch sử của "Linear Logic"
-  _Thêm nội dung vào!_
+  Linear Logic (Logic tuyến tính) được giới thiệu bởi Jean-Yves Girarad năm 1987. Trong khi nguồn gốc của việc phát minh ra logic mới này có từ việc phân tích ngữ nghĩa của các mô hình của System F (phép tính lambda đa hình), ta có thể thầy được toàn hệ thống logic tuyến tính như là một nỗ lực để hòa giải vẻ đẹp và sự đối xứng của hệ thống logic cổ điển với nhu cầu tìm kiếm các phép chứng minh kiến tạo dẩn đã dẫn đến logic ực giác. <br/>
+  Logic cổ điển không biểu diễn một số quan hệ nhân quả, nên nếu muốn biểu diễn dạng cộng (additive với phép <b>"and"</b> và <b>"or"</b>) cùng với dạng nhân (multiplicative) của phép <b>"and"</b> và <b>"or"</b> mà hai dạng này không tương đương nhau thì ta cần các phép nối mới gồm phép <b>"&"</b> (<i>and</i> dạng cộng), phép <b>"⊕"</b> (<i>or</i> dạng cộng),  phép <b>"⊗"</b> (<i>and</i> dạng nhân) và phép <b>"⅋"</b> (<i>or</i> dạng nhân).<br/>
+  Việc có thêm các phép nối này không gây trùng lặp mà thật ra nó giúp ta hiểu sự mâu thuẩn giữa logic cổ điển và logic trục giác một cách rõ ràng hơn. 
 ## 4. Ứng dụng của "Linear Logic"
   _Thêm nội dung vào!_
 ## 5. Chi tiết và ví dụ về “linear implication” - “hàm tuyến tính”
