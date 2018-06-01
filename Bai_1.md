@@ -13,9 +13,12 @@
   Tăng tính bảo mật, an toàn và rõ ràng trong chuỗi cung ứng. Một khi dữ liệu đã được xác thực và lưu lại thì không thể thay đổi hay đánh cắp nhờ các kết nối thông minh và một số điều kiện mã hoá kèm theo để xác nhận giao dịch là hợp lệ. Doanh nghiệp cũng có thể tăng thêm tính tin tưởng của khách hàng khi cho họ theo dõi quá trình giao dịch, từ đó tăng thêm lợi thế cạnh tranh cho công ty của mình.<br />
   Dễ dàng theo dõi và khắc phục lỗi do có sự lưu trữ dữ liệu theo phân cấp thời gian.<br />
 ### 2.3 Ứng dụng trong việc vay thế chấp
-  -Thêm vào-
+  Smart contract giúp tăng thêm tính bảo mật cho người sử dụng để vay mượn tiền, cung cấp chức năng cho phép người cho vay đặt ra các yêu cầu với người vay tiền như là thời gian vay mượn, số tiền cho vay, lãi suất bao nhiêu phần trăm... <br />
+  Hợp đồng thông minh này có thể tự động và đảm bảo người mượn phải trả đúng thời hạn, nếu không hệ thống sẽ tự động lấy tài sản mà người vay đã thế chấp để bù vào những phần bị trễ hạn cho người cho vay.<br />
 ### 2.4 Ứng dụng trong hợp đồng việc làm
-  -Thêm vào-
+  Loại hình hợp đồng thông minh này giúp cho doanh nghiệp có thể giảm sai sót, chi phí cũng như thời gian trong việc phát lương cho người lao động.<br />
+  Đảm bảo người lao động chấp hành tất cả những điều khoản đã đề ra trong hợp đồng, bởi vì hợp đồng thông minh này sử dụng công nghệ Blockchain, không thể bị chỉnh sửa hay lấy cắp.<br />
+  Bảo vệ quyền lợi của người lao động, tránh tình trạng bị thiếu lương, mất lương.<br />
 ### 2.5 Ứng dụng trong bảo vệ nội dung bản quyền
   Smart contract ghi lại hoạt động có liên quan đến bản quyền sản phẩm,theo dõi các hoạt động của sản phẩm của mình trên internet, từ đó có thể giúp cho tác giả hay người tạo ra sản phẩm biết được những hành vi vi phạm bản quyền.<br />
 ## 3. Lịch sử của "Linear Logic"
