@@ -26,7 +26,8 @@
   Logic cổ điển không biểu diễn một số quan hệ nhân quả, nên nếu muốn biểu diễn dạng cộng (additive với phép <b>"and"</b> và <b>"or"</b>) cùng với dạng nhân (multiplicative) của phép <b>"and"</b> và <b>"or"</b> mà hai dạng này không tương đương nhau thì ta cần các phép nối mới gồm phép <b>"&"</b> (<i>and</i> dạng cộng), phép <b>"⊕"</b> (<i>or</i> dạng cộng),  phép <b>"⊗"</b> (<i>and</i> dạng nhân) và phép <b>"⅋"</b> (<i>or</i> dạng nhân).<br/>
   Việc có thêm các phép nối này không gây trùng lặp mà thật ra nó giúp ta hiểu sự mâu thuẩn giữa logic cổ điển và logic trục giác một cách rõ ràng hơn. 
 ## 4. Ứng dụng của "Linear Logic"
-  _Thêm nội dung vào!_
+  Linear Logic có khá nhiều ứng dụng và liên quan mật thiết đến một số vấn đề trong tính toán như lập trình hàm, lập trình logic, lập trình tương tranh, lập trình hướng đối tượng cũng như các vấn đề về logic không đơn điệu trong lập kế hoạch AI và nhiều ứng dụng khác.<br/>
+  Một trong các mảng ứng dụng được phát triển mạnh mẽ chính là lập trình hàm (Functional programming).
 ## 5. Chi tiết và ví dụ về “linear implication” - “hàm tuyến tính”
   _Thêm nội dung vào!_
 ## 6. Chi tiết và ví dụ về phép hội tuyến tính - nhân (linear conjunction - times, ký hiệu: ⊗)
