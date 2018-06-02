@@ -27,7 +27,9 @@
   Việc có thêm các phép nối này không gây trùng lặp mà thật ra nó giúp ta hiểu sự mâu thuẩn giữa logic cổ điển và logic trục giác một cách rõ ràng hơn. 
 ## 4. Ứng dụng của "Linear Logic"
   Linear Logic có khá nhiều ứng dụng và liên quan mật thiết đến một số vấn đề trong tính toán như lập trình hàm, lập trình logic, lập trình tương tranh, lập trình hướng đối tượng cũng như các vấn đề về logic không đơn điệu trong lập kế hoạch AI và nhiều ứng dụng khác.<br/>
-  Một trong các mảng ứng dụng được phát triển mạnh mẽ chính là lập trình hàm (Functional programming).
+  Một trong các mảng ứng dụng được phát triển mạnh mẽ chính là lập trình hàm (Functional programming). Curry-Howard isomorphism (tính đẳng cấu) nêu rằng có sự tương đồng giữa những chứng minh (proof) của logic học chủ nghĩa trực quan (intuitionistic logic) và sự tính toán trong ngôn ngữ lập trình hàm. Một chứng minh có thể trở thành một hàm hiệu quả khi có đầy đủ giả thiết và đưa ra được kết luận. Đây chính là ứng dụng được phát triển mạnh mẽ của linear logic và lập trình hàm.<br/>
+  Linear logic cho phép kiểm soát hiệu quả hơn ngữ cảnh và có thể tạo được cả mô hình dữ liệu production lẫn consumption. Điều này mở ra rất nhiều khả năng trong các ứng dụng như lập trình hướng đối tượng (OOP), cơ sở dữ liệu, xử lý ngôn ngữ tự nhiên.<br/>
+  Ngoài ra, linear logic còn được ứng dụng trong nhiều mảng khác nhau như trong Petri Nets, State-Oriented Programming, Chemical Abstract Machine,...
 ## 5. Chi tiết và ví dụ về “linear implication” - “hàm tuyến tính”
   _Thêm nội dung vào!_
 ## 6. Chi tiết và ví dụ về phép hội tuyến tính - nhân (linear conjunction - times, ký hiệu: ⊗)
