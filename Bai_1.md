@@ -49,5 +49,5 @@
 ## 13. Chi tiết và ví dụ về phép toán \perp
   _Thêm nội dung vào!_
 ## TÀI LIỆU THAM KHẢO
-  _Thêm nội dung vào!_
+  [1] Vladimir Alexiev. Applications of Linear Logic to Computation: An Overview, 1993
   
