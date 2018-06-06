@@ -50,8 +50,10 @@
   _Thêm nội dung vào!_
 ## TÀI LIỆU THAM KHẢO
   [Alex93] Vladimir Alexiev. Applications of Linear Logic to Computation: An Overview, 1993  
+  
   Sergy Nosikov. What are smart contracts?  
   [https://www.cryptoninjas.net/what-are-smart-contracts/]. Truy cập vào 01/6/2018.  
-  [Sza96] Nick Szabo. “Smart Contracts: Building Blocks for Digital Markets“. Trên Extropy #16, 1996.
+  
+  [Sza96] Nick Szabo. “Smart Contracts: Building Blocks for Digital Markets“. Trên Extropy #16, 1996.  
   
   
