@@ -21,7 +21,7 @@ Sử dụng hợp đồng thông minh giúp việc bầu cử trở nên công k
 Hợp đồng thông minh có thể cho phép việc chuyển giao hàng hóa quốc tế thông qua thư tín dụng nhanh và thanh toán thương mại, đồng thời cho phép thanh khoản tài sản tài chính lớn hơn. Nó cũng có thể cải thiện hiệu quả tài chính cho người mua, nhà cung cấp và tổ chức.
 ### Ứng dụng trong lĩnh vực y tế, chăm sóc sức khỏe
 Trong tương lai, có thể hồ sơ y tế cá nhân sẽ được mã hóa và được lưu trữ trên blockchain với quyền truy cập duy nhất cho một cá nhân cụ thể. Các biên lai cho việc chi trả viện phí, dịch vụ chăm sóc sức khỏe, thuốc thang cũng sẽ được lưu trữ trên blockchain mà từ đó các hợp đồng thông minh có thể tự động kiểm tra và thực hiện việc hoàn phí theo các quy định của bảo hiểm y tế, tai nạn. Nó cũng có thể giúp tự động thực hiện các hỗ trợ tài chính đối với các cá nhân hiến máu, hiến tạng, hay tình nguyện làm các đối tượng nghiên cứu, tham gia các thử nghiệm y học.
-### Ứng dựng trong bất động sản
+### Ứng dụng trong bất động sản
 Với hợp đồng thông minh, chúng ta sẽ không phải mất phí cho các bên trung gian (môi giới) khi muốn thuê/cho thuê, bán/mua nhà, căn hộ,... Nó sẽ bắt các bên tham gia phải thực hiện đúng các yêu cầu trước thời hạn để thực hiện giao dịch (người thuê phải trả tiền, người cho thuê phải giao mã khóa vào nhà; tiền và khóa được hợp đồng giữ lại). Nếu một trong hai không thực hiện yêu cầu thì hợp đồng bị hủy và những gì hợp đồng đang giữ sẽ được trả cho người gửi tương ứng. Nó cũng giúp người cho thuê tự động quản lý vấn đề tiền thuê nhà (nếu quá hạn mà hợp đồng chưa nhận được tiền thuê, mã khóa nhà sẽ bị thay đổi).
 ### Hợp đồng thông minh trong thời đại IOT
 Mạng lưới "vạn vật kết nối Internet" sẽ mang lại cho mọi thiết bị trong cuộc sống hàng ngày khả năng kết nối với Internet, và do đó là khả năng kết nối đến hệ thống blockchain. Từ đó áp dụng hợp đồng thông minh vào blockchain, chúng ta sẽ biến gần như mọi giao dịch, trao đổi hàng ngày thành hoàn toàn tự động nhưng vẫn đảm bảo được tính chính xác của các giao dịch. Các cảm biến ở mọi nơi, hệ thống định vị vị trí,... giúp hợp đồng thông minh dễ dàng xác định được vị trí của gói hàng, kiểm tra được gói hàng đã đến vị trí của người nhận hay chưa, từ đó tự thực hiện các giao dịch hợp lý. 
@@ -66,7 +66,7 @@ Mạng lưới "vạn vật kết nối Internet" sẽ mang lại cho mọi thi�
   Lester Coleman. Smart Contracts: 12 Use Cases For Business And Beyond.  
   https://www.ccn.com/smart-contracts-12-use-cases-for-business-and-beyond/. Truy cập vào 01/6/2018.  
   
-  Laura Cox. 5 Applications Of Smart Contracts.
+  Laura Cox. 5 Applications Of Smart Contracts.  
   https://disruptionhub.com/smart-contract-uses/. Truy cập vào 01/6/2018.
   
   
