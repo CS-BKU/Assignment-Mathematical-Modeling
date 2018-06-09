@@ -1,0 +1,44 @@
+Sever item: private string SP_id = item_ ID+ user_ ID;
+		        Money price;
+		        Time expire_time;
+		
+Auction_process :
+  Global variable	money amount =0;
+  
+	Function : bool Auction_confirm (item* object, player* seller)
+			object->SP_id  -= seller->user_ID;
+			return true;
+      
+	Function : auctionOption (item*object,player*seller)
+			If Auction_confirm(object,seller) is true then
+				seller input the price (coins)  for object item
+				seller input expire time (hours) for this auction
+				object->price	= pice from input;
+				update auction_table; // to upload item to auction table so       
+                              //  other players can see it.
+			Endif
+      
+Function : getMoneyBack(player*objectPlayer,money*amount)
+		objectPlayer ->money += amount;
+    
+Function : cancelAuction ( player*owner,item*object)
+		 Object->SP_id += owner->user_ID;
+		 Return item to player’s inventory who owns that item 
+
+	Function : Auction ( item*object, money*amount, player*Curbuyer, player*Prebuyer,,player* owner)
+			if1 object->expire_time is not expired then
+				if2 amount < object->price then  
+              show error “Cannot auction with this amount of money”
+              ask for a new valid amount of money “Please, choose your valid amount”
+			  else2
+				      getMoneyBack(prebuyer,object->price);
+				      object->price = amount;
+				      Curbuyer->money -= amount;
+			  Endif2
+		else1 
+			  if3 amount=0 then
+				    object->SP_id += owner_id;
+			  else3 
+				    object->SP_id += Curbuyer->user_id;
+				    Sends Item to Current player inventory	
+				    Owner->money += amount;
