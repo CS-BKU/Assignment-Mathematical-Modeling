@@ -1,0 +1,276 @@
+\documentclass[a4paper]{article}
+\usepackage{vntex}
+%\usepackage[english,vietnam]{babel}
+%\usepackage[utf8]{inputenc}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol,longtable,amscd}
+\usepackage{diagbox}%Make diagonal lines in tables
+\usepackage{booktabs}
+\usepackage{alltt}
+\usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
+\usepackage{caption,subcaption}
+
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage[unicode]{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+
+\newtheorem{theorem}{{\bf Định lý}}
+\newtheorem{property}{{\bf Tính chất}}
+\newtheorem{proposition}{{\bf Mệnh đề}}
+\newtheorem{corollary}[proposition]{{\bf Hệ quả}}
+\newtheorem{lemma}[proposition]{{\bf Bổ đề}}
+\usepackage{cmll}
+
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{Images/hcmut.png}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Trường Đại Học Bách Khoa Tp.Hồ Chí Minh}\\
+		\textbf{\bf \ttfamily Khoa Khoa Học và Kỹ Thuật Máy Tính}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Bài tập lớn môn Cấu trúc Rời rạc cho KHMT (CO1007) - Niên khóa 2015-2016}
+\fancyfoot[R]{\scriptsize \ttfamily Trang {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+\everymath{\color{blue}}%make in-line maths symbols blue to read/check easily
+
+\sloppy
+\captionsetup[figure]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=-9pt}
+%space remove between caption, figure, and text
+\captionsetup[table]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=7pt}
+%space remove between caption, table, and text
+
+%\floatplacement{figure}{H}%forced here float placement automatically for figures
+%\floatplacement{table}{H}%forced here float placement automatically for table
+%the following settings (11 lines) are to remove white space before or after the figures and tables
+%\setcounter{topnumber}{2}
+%\setcounter{bottomnumber}{2}
+%\setcounter{totalnumber}{4}
+%\renewcommand{\topfraction}{0.85}
+%\renewcommand{\bottomfraction}{0.85}
+%\renewcommand{\textfraction}{0.15}
+%\renewcommand{\floatpagefraction}{0.8}
+%\renewcommand{\textfraction}{0.1}
+\setlength{\floatsep}{5pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+
+
+\usepackage{indentfirst}
+\setlength{\parindent}{0.5cm}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH 
+\end{center}
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=3cm]{Images/hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{l}{\textbf{{\Large MÔ HÌNH HÓA TOÁN HỌC (CO2011)}}}\\
+~~\\
+\hline
+\\
+\multicolumn{1}{l}{\textbf{{\Large Đề bài tập lớn}}}\\
+\\
+\textbf{{\Huge "Đặc tả Smart Contract bằng}} \\
+\textbf{{\Huge Linear Logic"}}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1.2cm}
+
+\begin{table}[h]
+\begin{tabular}{rrlr}
+\hspace{5 cm} & GVHD: & Nguyễn An Khương &\\
+\hspace{5 cm} &  & Huỳnh Tường Nguyên &\\
+\hspace{5 cm} &  & Trần Văn Hoài &\\
+\hspace{5 cm} &  & Lê Hồng Trang &\\
+\hspace{5 cm} &  & Trần Tuấn Anh &\\
+
+
+& SV thực hiện: & Nguyễn Lê Chí Bảo & 1610179 \\
+& & Nguyễn Đức Duy & 1610468 \\
+& & Nguyễn Ngọc Hoàng & 1611160 \\
+& & Đường Quang Huy & 1611244 \\
+& & Bùi Anh Nhật & 1612377 \\
+\end{tabular}
+\end{table}
+\vspace{1.2cm}
+\begin{center}
+{\footnotesize Tp. Hồ Chí Minh, Tháng .../2015}
+\end{center}
+\end{titlepage}
+
+
+%\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bài toán 1}
+\subsection{Lịch sử của hợp đồng thông minh (smart contracts)}
+Cụm từ "smart contacts" (hợp đồng thông minh) được đặt ra bởi nhà khoa học máy tính và mật mã học Nick Szabo năm 1994 và đã được nghiên cứu qua nhiều năm. Nguyên lý hoạt động của nó được Szabo mô tả năm 1996 trong bài báo có tiêu đề "Smart Contracts: Building Blocks for Digital Markets" trên tạp chí Extropy [Sza96], rất lâu trước khi công nghệ blockchain ra đời. Theo ý tưởng của Szabo, smart contracts là những giao thức kỹ thuật số cho việc chuyển dịch thông tin, sử dụng các giải thuật toán học để thực thi các giao dịch một cách tự động một khi các điều khoản được thỏa và dùng để kiểm soát hoàn toàn quá trình này. Định nghĩa đã đi trước thời đại đến hơn 10 năm này vẫn còn đúng cho đến ngày nay. Tuy nhiên vào năm 1996, ý tưởng này vẫn chưa được đón nhận vì các công nghệ cần thiết để vận hành chưa ra đời, cụ thể là sổ cái phân tán (distributed ledger).\\
+
+Vào năm 2008, Bitcoin, đồng tiền kỹ thuật số hoàn chỉnh đầu tiên, đã được tạo ra dựa trên cơ sở của công nghệ blockchain. Blockchain của Bitcoin không cho phép các điều kiện, để kết thúc 1 giao dịch, được quy định trên một khối (block) mới vì nó chỉ chứa các thông tin giao dịch. Dù sao đi nữa, sự xuất hiện của blockchain đã trở thành nguồn động lực để phát triển smart contracts. Năm 2013, nền tảng blockchain Ethereum đã giúp cho việc đưa smart contracts vào thực tế. Ngày nay, mặc dù thị trường đã cung cấp nhiều nền tảng cho phép sử dụng smart contracts nhưng Ethereum vẫn được sử dụng nhiều nhất.
+
+\subsection{Ứng dụng của hợp đồng thông minh}
+
+\subsubsection{Ứng dụng vào bảo hiểm}
+Smart contract giúp cải thiện trải nghiệm của người dùng cũng như giảm thiểu những sai sót và chi phí trong quá trình giao dịch bảo hiểm. Blockchain cũng như Smart contract tăng tốc quá trình xử lí yêu cầu/trao trả bảo hiểm, tránh được những lỗi sai sót so với làm bằng tay.\\
+
+Ứng dụng này cũng giúp tự động hoá việc chuyển tiền đến người sử dụng bảo hiểm và cũng đảm bảo được hợp đồng là hợp lệ. Ví dụ như một người sửa xe của anh ấy chỉ nhận được tiền bảo hiểm nếu anh ta sửa xe tại cửa hàng được chứng nhận và phải có sự xác nhận bởi người thợ sửa xe đó.
+Dự đoán các thông tin từ thế giới thực. Ví dụ, Smart contract có thể ghi lại các thông tin về thời tiết lên Blockchain, sau đó nó đọc thông tin này và trả tiền bồi thường cho chuyến bay của những hành khách mà bị huỷ hay bị hoãn do thời tiết xấu.\\
+
+Kết hợp với IoT và các cảm biến để theo dõi sự hư tổn của các thiết bị trong nhà để có thể tự động đền bù hoặc hỗ trợ chủ nhân ngôi nhà gọi người sửa chữa đến.
+
+\subsubsection{Ứng dụng trong chuỗi cung ứng}
+
+Smart contract giúp giảm chi phí lưu trữ đồng thời cải thiện việc quản lí chuỗi cung ứng tốt hơn, cho phép lưu lại mọi thông tin, thao tác dù là rất nhỏ theo chiều đi của sản phẩm mà không làm ảnh hưởng gì đến dữ liệu.\\
+
+Tăng tính bảo mật, an toàn và rõ ràng trong chuỗi cung ứng. Một khi dữ liệu đã được xác thực và lưu lại thì không thể thay đổi hay đánh cắp nhờ các kết nối thông minh và một số điều kiện mã hoá kèm theo để xác nhận giao dịch là hợp lệ. Doanh nghiệp cũng có thể tăng thêm tính tin tưởng của khách hàng khi cho họ theo dõi quá trình giao dịch, từ đó tăng thêm lợi thế cạnh tranh cho công ty của mình.\\
+
+Dễ dàng theo dõi và khắc phục lỗi do có sự lưu trữ dữ liệu theo phân cấp thời gian.
+
+\subsubsection{Ứng dụng trong việc vay thế chấp}
+Smart contract giúp tăng thêm tính bảo mật cho người sử dụng để vay mượn tiền, cung cấp chức năng cho phép người cho vay đặt ra các yêu cầu với người vay tiền như là thời gian vay mượn, số tiền cho vay, lãi suất bao nhiêu phần trăm, v.v .\\
+
+Hợp đồng thông minh này có thể tự động và đảm bảo người mượn phải trả đúng thời hạn, nếu không hệ thống sẽ tự động lấy tài sản mà người vay đã thế chấp để bù vào những phần bị trễ hạn cho người cho vay.
+
+\subsubsection{Ứng dụng trong hợp đồng việc làm}
+Loại hình hợp đồng thông minh này giúp cho doanh nghiệp có thể giảm sai sót, chi phí cũng như thời gian trong việc phát lương cho người lao động.\\
+
+Đảm bảo người lao động chấp hành tất cả những điều khoản đã đề ra trong hợp đồng, bởi vì hợp đồng thông minh này sử dụng công nghệ Blockchain, không thể bị chỉnh sửa hay lấy cắp.\\
+
+Bảo vệ quyền lợi của người lao động, tránh tình trạng bị thiếu lương, mất lương.
+
+\subsubsection{Ứng dụng trong bảo vệ nội dung bản quyền}
+Smart contract ghi lại hoạt động có liên quan đến bản quyền sản phẩm,theo dõi các hoạt động của sản phẩm của mình trên internet, từ đó có thể giúp cho tác giả hay người tạo ra sản phẩm biết được những hành vi vi phạm bản quyền.
+
+\subsection{Lịch sử của "Linear Logic"}
+Linear Logic (Logic tuyến tính) được giới thiệu bởi Jean-Yves Girarad năm 1987. Trong khi nguồn gốc của việc phát minh ra logic mới này có từ việc phân tích ngữ nghĩa của các mô hình của System F (phép tính lambda đa hình), ta có thể thầy được toàn hệ thống logic tuyến tính như là một nỗ lực để hòa giải vẻ đẹp và sự đối xứng của hệ thống logic cổ điển với nhu cầu tìm kiếm các phép chứng minh kiến tạo dẩn đã dẫn đến logic ực giác. 
+Logic cổ điển không biểu diễn một số quan hệ nhân quả, nên nếu muốn biểu diễn dạng cộng (additive với phép "and" và "or") cùng với dạng nhân (multiplicative) của phép "and" và "or" mà hai dạng này không tương đương nhau thì ta cần các phép nối mới gồm phép "$\with$" (and dạng cộng), phép "$\oplus$" (or dạng cộng), phép "$\otimes$" (and dạng nhân) và phép "$\parr$" (or dạng nhân).\\
+
+Việc có thêm các phép nối này không gây trùng lặp mà thật ra nó giúp ta hiểu sự mâu thuẩn giữa logic cổ điển và logic trục giác một cách rõ ràng hơn.
+
+\subsection{Ứng dụng của "Linear Logic"}
+Linear Logic có khá nhiều ứng dụng và liên quan mật thiết đến một số vấn đề trong tính toán như lập trình hàm, lập trình logic, lập trình tương tranh, lập trình hướng đối tượng cũng như các vấn đề về logic không đơn điệu trong lập kế hoạch AI và nhiều ứng dụng khác.\\
+
+Một trong các mảng ứng dụng được phát triển mạnh mẽ chính là lập trình hàm (Functional programming). Curry-Howard isomorphism (tính đẳng cấu) nêu rằng có sự tương đồng giữa những chứng minh (proof) của logic học chủ nghĩa trực quan (intuitionistic logic) và sự tính toán trong ngôn ngữ lập trình hàm. Một chứng minh có thể trở thành một hàm hiệu quả khi có đầy đủ giả thiết và đưa ra được kết luận. Đây chính là ứng dụng được phát triển mạnh mẽ của linear logic và lập trình hàm.\\
+
+Linear logic cho phép kiểm soát hiệu quả hơn ngữ cảnh và có thể tạo được cả mô hình dữ liệu production lẫn consumption. Điều này mở ra rất nhiều khả năng trong các ứng dụng như lập trình hướng đối tượng (OOP), cơ sở dữ liệu, xử lý ngôn ngữ tự nhiên.\\
+
+Ngoài ra, linear logic còn được ứng dụng trong nhiều mảng khác nhau như trong Petri Nets, State-Oriented Programming, Chemical Abstract Machine, v.v.
+
+\subsection{Chi tiết và ví dụ hàm tuyến tính}
+Trong logic cổ điển và logic trực quan, nếu có $A$ và $A \rightarrow  B$ thì có $B$ nhưng $A$ vẫn còn. Điều này chỉ đúng trong toán học nhưng không đúng trong thực tế. Vì thế ta cần một phép implication khác phù hợp hơn. Linear logic đã đưa ra phép linear implication $\multimap$. Biểu thức $A \multimap B$ được hiểu là “chi tiêu A để được B", khi đó biểu thức $A \rightarrow B = (!A) \multimap B$.\\
+
+\textbf{Ví dụ \thesubsection.1:} Cho A là "tiêu 5000 đồng" và B là "có 1 chai nước suối" thì $A \multimap B$ biểu diễn cho "nếu ta tiêu 5000 đồng thì ta sẽ có 1 chai nước suối nhưng đồng thời ta cũng mất 5000 đồng".
+
+\subsection{Chi tiết và ví dụ về phép hội tuyến tính - nhân (linear conjunction - times)}
+Trong linear logic phép hội tuyến tính được kí hiệu là $\otimes$. Giống với phép $\land$, phép $\otimes$ có nghĩa là có cả 2.\\
+
+\textbf{Ví dụ \thesubsection.2:} Ta có phương trình hóa học quen thuộc $2H_2 + O_2 \rightarrow 2H_2O$ thì trong linear logic phương trình được biểu diễn là $H_2 \otimes H_2 \otimes O_2 \multimap H_2O \otimes H_2O$ (có 2 $H_2$ và 1 $O_2$ thì ra có 2 $H_2O$ nhưng sẽ không còn nhưng chất trước phản ứng nữa).
+
+\subsection{Chi tiết và ví dụ về phép hội tuyến tính ("additive conjunction" hoặc "with")}
+Phép hội tuyến tính "with" là một phép có trong linear logic nhưng không có trong logic cổ điển và được kí hiệu là $\with$. Khác với phép $\land$ va phép $\otimes$, phép $\with$ có nghĩa là có 1 trong 2.\\
+
+\textbf{Ví dụ \thesubsection.1:} Cho A là "có 5000 đồng", B là "có 1 chai nước suối" và C là "có 1 cây bút bi". Ta sẽ có biểu thức $A \multimap B \with C$ nghĩa là "với 5000 đồng ta có thể có 1 chia nước hoặc 1 cây bút bi, nhưng chỉ 1 trong hai, chai nước hoặc cây bút bi".
+
+\subsection{Chi tiết và ví dụ về phép tuyển tuyến tính - cộng (linear disjunction - plus)}
+Trong linear logic, phép đối ngẫu của phép $\with$ là phép tuyển tuyến tính - cộng được kí hiệu là $\oplus$. Giống với phép $\lor$, phép $\oplus$ có nghĩa là hoặc cái này hoặc cái kia.\\
+
+\textbf{Ví dụ \thesubsection.1:} Tương tự với B và C ở các ví dụ trên, biểu thức $B \oplus C$ nghĩa là "hoặc có 1 chai nước suối hoặc có 1 cây bút bi, nhưng không biết có cái nào".
+
+\subsection{Chi tiết và ví dụ về phép tuyển tuyến tính (“par”)}
+Đối ngẫu với phép $\otimes$ là phép tuyển tuyến tính $\parr$. Phép $\parr$ tương đối khó hiểu. Biểu thức $A \parr B$ có thể được biểu diễn dưới dạng khác là $A^{\bot} \multimap B$ hay $B^{\bot} \multimap A$. Nó có nghĩa là "phải lựa chọn giữa A và B, không được chọn cả 2".\\
+
+\textbf{Ví dụ \thesubsection.1:} Tương tự với A,B và C ở các ví dụ trên, biểu thức $A \multimap B \parr C$ nghĩa là "có 5000 đồng thì buộc phải chọn giữa 1 chai nước suối hoặc 1 cây bút bí, chứ không chọn cả 2". Trong khi đó biểu thức $A \multimap B \with C$ nghĩa là "có 5000 đồng thì sẽ có 1 chai nước suối hoặc 1 cây bút bi, nhưng không buốc chọn cũng không biết cái nào sẽ được chọn".
+
+\subsection{Chi tiết và ví dụ về phép toán ! và phép toán ?}
+Phép toán đơn ngôi "Of course" ! và "why not" !
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{Tài liệu}
+\begin{thebibliography}{99999}
+\bibitem[Alex93]{Alex93}{Vladimir Alexiev.} {\em Applications of Linear Logic to Computation: An Overview}, 1993.
+\bibitem[Ser18]{Ser18}{Sergy Nosikov.} {\em \hyperlink{https://www.cryptoninjas.net/what-are-smart-contracts/}{"What are smart contracts?"}}, truy cập vào 01/6/2018.
+\bibitem[Sza96]{Sza96}{Nick Szabo.} {\em “Smart Contracts: Building Blocks for Digital Markets“.}, trên Extropy \#16, 1996.
+
+
+\end{thebibliography}
+\end{document}
