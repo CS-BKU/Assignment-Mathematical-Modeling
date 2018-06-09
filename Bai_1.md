@@ -3,24 +3,31 @@
   Cụm từ "smart contacts" (hợp đồng thông minh) được đặt ra bởi nhà khoa học máy tính và mật mã học Nick Szabo năm 1994 và đã được nghiên cứu qua nhiều năm. Nguyên lý hoạt động của nó được Szabo mô tả năm 1996 trong bài báo có tiêu đề "Smart Contracts: Building Blocks for Digital Markets" trên tạp chí Extropy \[[Sza96](Bai_1.md#t%C3%80i-li%E1%BB%86u-tham-kh%E1%BA%A2o)\], rất lâu trước khi công nghệ blockchain ra đời. Theo ý tưởng của Szabo, smart contracts là những giao thức kỹ thuật số cho việc chuyển dịch thông tin, sử dụng các giải thuật toán học để thực thi các giao dịch một cách tự động một khi các điều khoản được thỏa và dùng để kiểm soát hoàn toàn quá trình này. Định nghĩa đã đi trước thời đại đến hơn 10 năm này vẫn còn đúng cho đến ngày nay. Tuy nhiên vào năm 1996, ý tưởng này vẫn chưa được đón nhận vì các công nghệ cần thiết để vận hành chưa ra đời, cụ thể là sổ cái phân tán (distributed ledger). <br />
   Vào năm 2008, Bitcoin, đồng tiền kỹ thuật số hoàn chỉnh đầu tiên, đã được tạo ra dựa trên cơ sở của công nghệ blockchain. Blockchain của Bitcoin không cho phép các điều kiện, để kết thúc 1 giao dịch, được quy định trên một khối (block) mới vì nó chỉ chứa các thông tin giao dịch. Dù sao đi nữa, sự xuất hiện của blockchain đã trở thành nguồn động lực để phát triển smart contracts. Năm 2013, nền tảng blockchain Ethereum đã giúp cho việc đưa smart contracts vào thực tế. Ngày nay, mặc dù thị trường đã cung cấp nhiều nền tảng cho phép sử dụng smart contracts nhưng Ethereum vẫn được sử dụng nhiều nhất. <br/>
 ## 2. Ứng dụng của hợp đồng thông minh
-### 2.1 Ứng dụng vào bảo hiểm
+Đây chỉ là một số trong số rất nhiều ứng dụng của hợp đồng thông minh
+### Ứng dụng trong bảo hiểm
   Smart contract giúp cải thiện trải nghiệm của người dùng cũng như giảm thiểu những sai sót và chi phí trong quá trình giao dịch bảo hiểm. Blockchain cũng như Smart contract tăng tốc quá trình xử lí yêu cầu/ trao trả bảo hiểm, tránh được những lỗi sai sót so với làm bằng tay.<br />
-  Ứng dụng này cũng giúp tự động hoá việc chuyển tiền đến người sử dụng bảo hiểm và cũng đảm bảo được hợp đồng là hợp lệ. Ví dụ như một người sửa xe của anh ấy chỉ nhận được tiền bảo hiểm nếu anh ta sửa xe tại cửa hàng được chứng nhận và phải có sự xác nhận bởi người thợ sửa xe đó.<br />
-  Dự đoán các thông tin từ thế giới thực. Ví dụ, Smart contract có thể ghi lại các thông tin về thời tiết lên Blockchain, sau đó nó đọc thông tin này và trả tiền bồi thường cho chuyến bay của những hành khách mà bị huỷ hay bị hoãn do thời tiết xấu.<br />
-  Kết hợp với IoT và các cảm biến để theo dõi sự hư tổn của các thiết bị trong nhà để có thể tự động đền bù hoặc hỗ trợ chủ nhân ngôi nhà gọi người sửa chữa đến.<br />
-### 2.2 Ứng dụng trong chuỗi cung ứng   
-  Smart contract giúp giảm chi phí lưu trữ đồng thời cải thiện việc quản lí chuỗi cung ứng tốt hơn, cho phép lưu lại mọi thông tin, thao tác dù là rất nhỏ theo chiều đi của sản phẩm mà không làm ảnh hưởng gì đến dữ liệu.<br />
-  Tăng tính bảo mật, an toàn và rõ ràng trong chuỗi cung ứng. Một khi dữ liệu đã được xác thực và lưu lại thì không thể thay đổi hay đánh cắp nhờ các kết nối thông minh và một số điều kiện mã hoá kèm theo để xác nhận giao dịch là hợp lệ. Doanh nghiệp cũng có thể tăng thêm tính tin tưởng của khách hàng khi cho họ theo dõi quá trình giao dịch, từ đó tăng thêm lợi thế cạnh tranh cho công ty của mình.<br />
-  Dễ dàng theo dõi và khắc phục lỗi do có sự lưu trữ dữ liệu theo phân cấp thời gian.<br />
-### 2.3 Ứng dụng trong việc vay thế chấp
-  Smart contract giúp tăng thêm tính bảo mật cho người sử dụng để vay mượn tiền, cung cấp chức năng cho phép người cho vay đặt ra các yêu cầu với người vay tiền như là thời gian vay mượn, số tiền cho vay, lãi suất bao nhiêu phần trăm... <br />
-  Hợp đồng thông minh này có thể tự động và đảm bảo người mượn phải trả đúng thời hạn, nếu không hệ thống sẽ tự động lấy tài sản mà người vay đã thế chấp để bù vào những phần bị trễ hạn cho người cho vay.<br />
-### 2.4 Ứng dụng trong hợp đồng việc làm
-  Loại hình hợp đồng thông minh này giúp cho doanh nghiệp có thể giảm sai sót, chi phí cũng như thời gian trong việc phát lương cho người lao động.<br />
-  Đảm bảo người lao động chấp hành tất cả những điều khoản đã đề ra trong hợp đồng, bởi vì hợp đồng thông minh này sử dụng công nghệ Blockchain, không thể bị chỉnh sửa hay lấy cắp.<br />
-  Bảo vệ quyền lợi của người lao động, tránh tình trạng bị thiếu lương, mất lương.<br />
-### 2.5 Ứng dụng trong bảo vệ nội dung bản quyền
-  Smart contract ghi lại hoạt động có liên quan đến bản quyền sản phẩm,theo dõi các hoạt động của sản phẩm của mình trên internet, từ đó có thể giúp cho tác giả hay người tạo ra sản phẩm biết được những hành vi vi phạm bản quyền.<br />
+  Smart contract cũng giúp tự động hoá việc chuyển tiền đến người sử dụng bảo hiểm và cũng đảm bảo được hợp đồng là hợp lệ. Ví dụ như một người sửa xe của anh ấy chỉ nhận được tiền bảo hiểm nếu anh ta sửa xe tại cửa hàng được chứng nhận và phải có sự xác nhận bởi người thợ sửa xe đó. Một ví dụ khác, smart contract có thể ghi lại các thông tin về thời tiết lên blockchain, sau đó nó đọc thông tin này và trả tiền bồi thường cho chuyến bay của những hành khách mà bị huỷ hay bị hoãn do thời tiết xấu. Nó cũng có thể kết hợp với công nghệ IoT và các cảm biến để theo dõi sự hư tổn của các thiết bị trong nhà để có thể tự động đền bù hoặc hỗ trợ chủ nhân ngôi nhà gọi người sửa chữa đến.
+### Ứng dụng trong chuỗi cung ứng (logistics) 
+  Smart contract giúp giảm chi phí lưu trữ đồng thời cải thiện việc quản lí chuỗi cung ứng tốt hơn, cho phép lưu lại mọi thông tin, thao tác dù là rất nhỏ theo chiều đi của sản phẩm. Nó giúp tăng tính bảo mật, an toàn và rõ ràng trong chuỗi cung ứng. Một khi dữ liệu đã được xác thực và lưu lại thì không thể thay đổi hay đánh cắp nhờ các kết nối thông minh và một số điều kiện mã hoá kèm theo để xác nhận giao dịch là hợp lệ. Doanh nghiệp sẽ nhận được nhiều hơn sự tin tưởng của khách hàng khi cho họ theo dõi quá trình giao dịch, từ đó tăng thêm lợi thế cạnh tranh cho công ty của mình. Bên cạnh đó, smart contract giúp người quản lý dễ dàng theo dõi và khắc phục lỗi do có sự lưu trữ dữ liệu theo phân cấp thời gian.
+### Ứng dụng trong việc vay thế chấp
+  Smart contract giúp tăng thêm tính bảo mật cho người sử dụng để vay mượn tiền, cung cấp chức năng cho phép người cho vay đặt ra các yêu cầu với người vay tiền như là thời gian vay mượn, số tiền cho vay, lãi suất bao nhiêu phần trăm... Hợp đồng thông minh này có thể tự động và đảm bảo người mượn phải trả đúng thời hạn, nếu không hệ thống sẽ tự động lấy tài sản mà người vay đã thế chấp để bù vào những phần bị trễ hạn cho người cho vay.
+### Ứng dụng trong hợp đồng việc làm
+  Loại hình hợp đồng thông minh này giúp cho doanh nghiệp có thể giảm sai sót, chi phí cũng như thời gian trong việc phát lương cho người lao động. Nó cũng đảm bảo người lao động chấp hành tất cả những điều khoản đã đề ra trong hợp đồng, bởi vì hợp đồng thông minh này sử dụng công nghệ Blockchain, không thể bị chỉnh sửa hay lấy cắp. Đồng thời, smart contrac cũng sẽ bảo vệ quyền lợi của người lao động, tránh tình trạng bị thiếu lương, mất lương.
+### Ứng dụng trong bảo vệ nội dung bản quyền
+  Smart contract ghi lại hoạt động có liên quan đến bản quyền sản phẩm,theo dõi các hoạt động của sản phẩm của mình trên internet, từ đó có thể giúp cho tác giả hay người tạo ra sản phẩm biết được những hành vi vi phạm bản quyền.
+### Ứng dụng trong bầu cử
+_noi dung_
+### Ứng dụng trong sổ xố
+_nd_
+### Ứng dụng trong Tokens
+_nd_
+### Ứng dụng trong Automobile
+There’s no doubt that we’re progressing from slothful pre-human vertebrates to super-smart robots. Think of a future where everything is automated. Google’s getting there with smartphones, smart glasses, and even smart cars. That’s where smart contracts help. One example is the self-autonomous or self-parking vehicles, where smart contracts could put into play a sort of ‘oracle’ that could detect who was at fault in a crash; the sensor or the driver, as well as countless other variables.  Using smart contracts, an automobile insurance company could charge rates differently based on where, and under which, conditions customers are operating their vehicles.
+### Ứng dụng trong lĩnh vực y tế, chăm sóc sức khỏe
+Personal health records could be encoded and stored on the blockchain with a private key which would grant access only to specific individuals. The same strategy could be used to ensure that research is conducted via HIPAA laws (in a secure and confidential way). Receipts of surgeries could be stored on a blockchain and automatically sent to insurance providers as proof-of-delivery. The ledger, too, could be used for general healthcare management, such as supervising drugs, regulation compliance, testing results, and managing healthcare supplies.
+Smart contracts can facilitate the sharing of cancer data. They can facilitate the patient consent management process and aggregate data contribution and data sharing while protecting patient privacy.
+### Ứng dựng trong bất động sản
+You can get more money through smart contracts. Ordinarily, if you wanted to rent your apartment to someone, you’d need to pay a middleman such as Craigslist or a newspaper to advertise and then again you’d need to pay someone to confirm that the person paid rent and followed through. The ledger cuts your costs. All you do is pay via bitcoin and encode your contract on the ledger. Everyone sees, and you accomplish automatic fulfillment. Brokers, real estate agents, hard money lenders, and anyone associated with the property game can profit.
 ## 3. Lịch sử của "Linear Logic"
   Linear Logic (Logic tuyến tính) được giới thiệu bởi Jean-Yves Girarad năm 1987. Trong khi nguồn gốc của việc phát minh ra logic mới này có từ việc phân tích ngữ nghĩa của các mô hình của System F (phép tính lambda đa hình), ta có thể thầy được toàn hệ thống logic tuyến tính như là một nỗ lực để hòa giải vẻ đẹp và sự đối xứng của hệ thống logic cổ điển với nhu cầu tìm kiếm các phép chứng minh kiến tạo dẩn đã dẫn đến logic ực giác. <br/>
   Logic cổ điển không biểu diễn một số quan hệ nhân quả, nên nếu muốn biểu diễn dạng cộng (additive với phép <b>"and"</b> và <b>"or"</b>) cùng với dạng nhân (multiplicative) của phép <b>"and"</b> và <b>"or"</b> mà hai dạng này không tương đương nhau thì ta cần các phép nối mới gồm phép <b>"&"</b> (<i>and</i> dạng cộng), phép <b>"⊕"</b> (<i>or</i> dạng cộng),  phép <b>"⊗"</b> (<i>and</i> dạng nhân) và phép <b>"⅋"</b> (<i>or</i> dạng nhân).<br/>
@@ -49,11 +56,18 @@
 ## 13. Chi tiết và ví dụ về phép toán \perp
   _Thêm nội dung vào!_
 ## TÀI LIỆU THAM KHẢO
-  [Ale93] Vladimir Alexiev. Applications of Linear Logic to Computation: An Overview, 1993  
+  [Alex93] Vladimir Alexiev. Applications of Linear Logic to Computation: An Overview, 1993  
   
   Sergy Nosikov. What are smart contracts?  
   [https://www.cryptoninjas.net/what-are-smart-contracts/]. Truy cập vào 01/6/2018.  
   
   [Sza96] Nick Szabo. “Smart Contracts: Building Blocks for Digital Markets“. Trên Extropy #16, 1996.  
+  
+  Blockgeeks team. Smart Contracts: The Blockchain Technology That Will Replace Lawyers.  
+  https://blockgeeks.com/guides/smart-contracts/. Truy cập vào 01/6/2018.  
+  
+  Lester Coleman. Smart Contracts: 12 Use Cases For Business And Beyond.  
+  https://www.ccn.com/smart-contracts-12-use-cases-for-business-and-beyond/. Truy cập vào 01/6/2018.  
+  
   
   
