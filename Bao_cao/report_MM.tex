@@ -433,7 +433,7 @@ Mã giả để lập trình smart contract minh họa cho ngữ cảnh được
 \textbf{Output:}\\
     \If {object->expire\_time is not expired}
     {
-        \If{amount < object->price}
+        \If{amount <= object->price}
         {
             \State \textbf{Show}  “Cannot auction with this amount of money”;
             \State \textbf{Ask} “Please, choose your valid amount”;
