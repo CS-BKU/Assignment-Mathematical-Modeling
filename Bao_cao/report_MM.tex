@@ -341,7 +341,7 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
         $B \otimes Higher(y,x) \multimap Convert(B, C)$
     \end{center}
     
-    \item Khi B tham gia đấu giá (Giá tiền đấu giá của B là yB phải lớn hơn giá tiền đấu giá của C là yC), smart contract tiến hành hoàn tiền cho C, và sau đó chuyển B thành C\\
+    \item Khi B tham gia đấu giá (Giá tiền đấu giá của B là $y_{B}$ phải lớn hơn giá tiền đấu giá của C là $y_{C}$), smart contract tiến hành hoàn tiền cho C, và sau đó chuyển B thành C\\
     \begin{center}
         $B \otimes C \otimes Higher(y_{B}, y_{C}) \multimap (Wallet_{C} + y_{C}) \otimes Convert(B,C)$
     \end{center}
@@ -358,7 +358,7 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
     
     \item Nếu vật phẩm được đấu giá thành công thì smart contract sẽ tự động chuyển tiền cho A\\
     \begin{center}
-        $(Wallet_{A} + y_{C}) \parr (Wallet_{C} + y_{C})$
+        $(Wallet_{A} + y_{C}) \parr (C \otimes (Wallet_{C} + y_{C}))$
     \end{center}
     
     \item Trong khi chưa hết thời gian đấu giá times, bên A có quyền hủy hợp đồng. Nếu chưa có người đấu giá C, thì smart contract sẽ hoàn lại vật phẩm cho A
