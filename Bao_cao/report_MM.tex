@@ -279,12 +279,13 @@ Trong linear logic, có cách biểu diễn sự thật - cộng, kí hiệu là
 
 \subsection{Chi tiết và ví dụ về phép toán $!$}
 %%In full linear logic/linear type theory there is assumed a (comonadic) modality denoted “!” and called the exponential modality, whose role is, roughly, to give linear types also a non-linear interpretation. This is also called the “of course”-modality or the storage modality, and sometimes the “bang”-operation.
-Trong linear logic đây đủ, có 1 phương thức (modality) kí hiệu là $!$ và được gọi là phương thức số mũ. Nó có vai trò là cho chuyển đổi loại tuyến tính sang dạng không tuyến tính. Nó có tên gọi trong tiếng anh là "of course" hay "bang".
+Trong linear logic đây đủ, có 1 phương thức (modality) kí hiệu là $!$ và được gọi là phương thức số mũ. Nó có vai trò là cho chuyển đổi loại tuyến tính sang dạng không tuyến tính. Nó có tên gọi trong tiếng anh là "of course" hay "bang".\\
 \textbf{Ví dụ \thesubsection.1:}
 
 \subsection{Chi tiết và ví dụ về phép toán $?$}
 %%In classical linear logic (meaning with involutive de Morgan duality), the de Morgan dual of “!” is denoted “?” and called the “why not”-modality.
-Torng linear logic cổ điển (với tính đối ngẫu de Morgan), ký tự de Morgan đối ngẫu của "!" được biểu diễn là "?" và được gọi là phép toán "why not"
+Torng linear logic cổ điển (với tính đối ngẫu de Morgan), ký tự de Morgan đối ngẫu của "$!$" được biểu diễn là "$?$" và được gọi là phép toán "why not".
+
 
 \section{Bài toán 2}
 \subsection{Mô tả ngữ cảnh bằng lời}
@@ -350,14 +351,14 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
         $C \otimes Item \multimap Send(Item,C)$
     \end{center}
     
-    \item Trường hợp không ai tham gia đấu giá, smart contract sẽ trả vật phẩm lại cho A\\
+    \item Trường hợp việc đem vật phẩm đi đấu giá không thành công, smart contract sẽ trả vật phẩm lại cho A\\
     \begin{center}
         $A \otimes Item \multimap Return(Item,A)$
     \end{center}
     
     \item Nếu vật phẩm được đấu giá thành công thì smart contract sẽ tự động chuyển tiền cho A\\
     \begin{center}
-        $(Wallet_{C} + yC) \parr (Wallet_{A} + yC)$
+        $(Wallet_{A} + y_{C}) \parr (Wallet_{C} + y_{C})$
     \end{center}
     
     \item Trong khi chưa hết thời gian đấu giá times, bên A có quyền hủy hợp đồng. Nếu chưa có người đấu giá C, thì smart contract sẽ hoàn lại vật phẩm cho A
@@ -365,7 +366,7 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
         $Times^{\bot} \otimes Item \otimes C^{\bot} \multimap Return(Item,A)$
     \end{center}
     
-    \item Trong khi chưa hết thời gian đấu giá times, bên A có quyền hủy hợp đồng. Nếu có người đấu giá C, thì smart contract sẽ hoàn lại vật phẩm cho A, đồng thời hoàn tiền lại cho C\\
+    \item Trong khi chưa hết thời gian đấu giá times, bên A có quyền hủy việc đấu giá vật phẩm. Nếu có người đấu giá C, thì smart contract sẽ hoàn lại vật phẩm cho A, đồng thời hoàn tiền lại cho C\\
     \begin{center}
         $Times^{\bot} \otimes Item \otimes C \multimap Return(Item, A) \otimes (Wallet_{C} + y_{C})$ 
     \end{center}
