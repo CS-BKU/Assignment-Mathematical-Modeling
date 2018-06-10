@@ -364,7 +364,88 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
     \end{center}
 \end{itemize}
 
+\section{Bài toán 4}
+Mã giả để lập trình smart contract minh họa cho ngữ cảnh được đưa ra ở mục \textbf{2.1}.\\
+
+
+
+\begin{algorithm}
+ \textbf{Input} item* object, player* seller\\
+ \textbf{Output:}\\
+ \begin{algorithmic}
+    \State object->SP\_id  -= seller->user\_ID;
+    \State \Return true;
+ \end{algorithmic}
+ \caption{Auction\_confirm}
+\end{algorithm}
+
+\begin{algorithm}
+ \textbf{Input:} item*object,player*seller\\
+ textbf{Output:}\\
+ 
+    \If {Auction\_confirm(object,seller)}{
+        \State seller input the price (coins)  for object item;
+        \State seller input expire time (hours) for this auction;
+        \State object->price = price from input;
+        \State update auction\_table; //to upload item to auction table so other players can see it
+        }
+    \EndIf
+    
+ \caption{auctionOption}
+\end{algorithm}
+    
+\begin{algorithm}
+ \textbf{Input:} player*objectPlayer,money*amount\\
+  \textbf{Output:}\\
+    \State objectPlayer ->money += amount;
+    
+    \caption{getMoneyBack}
+\end{algorithm}
+
+\begin{algorithm}
+\textbf{Input:}  player*owner,item*object\\
+\textbf{Output:}\\
+    \State Object->SP\_id += owner->user\_ID;
+	\State Return (item) to (player who owns that item’s inventory);
+\caption{cancelAuction}
+\end{algorithm}
+
+\begin{algorithm}
+\textbf{Input:} item*object, money*amount, player*Curbuyer, player*Prebuyer, player* owner\\
+\textbf{Output:}\\
+    \If {object->expire\_time is not expired}
+    {
+        \If{amount < object->price}
+        {
+            \State \textbf{Show}  “Cannot auction with this amount of money”;
+            \State \textbf{Ask} “Please, choose your valid amount”;
+        }
+        
+        \Else
+        {
+            \State getMoneyBack(prebuyer,object->price);
+			\State object->price = amount;
+			\State Curbuyer->money -= amount;
+        }
+    }
+    \Else
+    {
+        \If{amount=0}
+        {
+            \State object->SP\_id += owner\_id;
+        }
+        \Else
+        {
+            \State object->SP\_id += Curbuyer->user\_id;
+			\State Sends Item to Current player inventory	
+			\State Owner->money += amount;
+        }
+    }
+\caption{Auction}
+\end{algorithm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \addcontentsline{toc}{section}{Tài liệu}
 \begin{thebibliography}{99999}
 \bibitem[Alex93]{Alex93}{Vladimir Alexiev.} {\em Applications of Linear Logic to Computation: An Overview}, 1993.
