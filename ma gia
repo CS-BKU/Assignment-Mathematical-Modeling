@@ -21,16 +21,20 @@ Auction_process :
 Function : getMoneyBack(player*objectPlayer,money*amount)
 		objectPlayer ->money += amount;
     
-Function : cancelAuction ( player*owner,item*object)
+Function : cancelAuction ( player*owner,item*object,player*CurPlayer)
 		 Object->SP_id += owner->user_ID;
 		 Return item to player’s inventory who owns that item 
+		 CurPlayer->money <- CurPlayer->money + amount;
 
 	Function : Auction ( item*object, money*amount, player*Curbuyer, player*Prebuyer,,player* owner)
 			if1 object->expire_time is not expired then
 				if2 amount < object->price then  
-              show error “Cannot auction with this amount of money”
-              ask for a new valid amount of money “Please, choose your valid amount”
-			  else2
+             				 show error “Cannot auction with this amount of money”
+             				 ask for a new valid amount of money “Please, choose your valid amount”
+				else if2 amount > Curbuyer->money then 
+					show errror " you dont have enough money ! "
+					ask for a new valid amount of money “Please, choose your valid amount”
+			  	else2
 				      getMoneyBack(prebuyer,object->price);
 				      object->price = amount;
 				      Curbuyer->money -= amount;
