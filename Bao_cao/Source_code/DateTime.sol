@@ -53,7 +53,7 @@ contract DateTime {
             return 28;
         }
     }
-    function parseTimestamp ( uint timestamp ) internal pure returns ( _DateTimedt) {
+    function parseTimestamp ( uint timestamp ) internal pure returns ( _DateTime dt) {
         uint secondsAccountedFor = 0;
         uint buf;
         uint8 i;
