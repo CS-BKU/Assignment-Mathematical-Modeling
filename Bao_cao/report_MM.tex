@@ -270,11 +270,18 @@ Trong linear logic, phép đối ngẫu của phép $\with$ là phép tuyển tu
 \textbf{Ví dụ \thesubsection.1:} Tương tự với A,B và C ở các ví dụ trên, biểu thức $A \multimap B \parr C$ nghĩa là "có 5000 đồng thì buộc phải chọn giữa 1 chai nước suối hoặc 1 cây bút bí, chứ không chọn cả 2". Trong khi đó biểu thức $A \multimap B \with C$ nghĩa là "có 5000 đồng thì sẽ có 1 chai nước suối hoặc 1 cây bút bi, nhưng không buốc chọn cũng không biết cái nào sẽ được chọn".
 
 \subsection{Chi tiết và ví dụ về phép toán $\bot$}
-In linear logic, there is both additive falsity, denoted 0, and multiplicative falsity, denoted ⊥. Despite the notation, it is 0 that is the bottom element of the lattice of linear truth values. (In particular, 0⊢⊥ but ⊥⊬0.)
-\subseciton{Chi tiết và ví dụ về phép toán $\top$}
-In linear logic, there is both additive truth, denoted ⊤, and multiplicative truth, denoted 1. As the notation suggests, it is ⊤ that is the top element of the lattice of linear truth values. (In particular, 1⊢⊤ but ⊤⊬1.)
+Trong linear logic, có cách biểu diễn sự sai - cộng, kí hiệu là $0$ và sự sai nhân, kí hiệu là $\bot$. Mặc dù kí hiệu như vậy, $0$ là phần tử đấy của mạng các giá trị chân lí tuyến tính. (Cụ thể là $0 \vdash \bot$ nhưng $\bot \nvdash 0$).
+
+\subsection{Chi tiết và ví dụ về phép toán}
+%%In linear logic, there is both additive truth, denoted ⊤, and multiplicative truth, denoted 1. As the notation suggests, it is ⊤ that is the top element of the lattice of linear truth values. (In particular, 1⊢⊤ but ⊤⊬1.)
+Trong linear logic, có cách biểu diễn sự thật - cộng, kí hiệu là $\top$ và cách biểu diện sự thật - nhân $1$. Như cách kí hiệu, $\top$ là phần tử trên cùng của mạng các giá trị chân lí tuyến tính. (Cụ thể là $1 \vdash \top$ nhưng $\top \nvdash 1$)
+
+
 \subsection{Chi tiết và ví dụ về phép toán !}
-In full linear logic/linear type theory there is assumed a (comonadic) modality denoted “!” and called the exponential modality, whose role is, roughly, to give linear types also a non-linear interpretation. This is also called the “of course”-modality or the storage modality, and sometimes the “bang”-operation.
+%%In full linear logic/linear type theory there is assumed a (comonadic) modality denoted “!” and called the exponential modality, whose role is, roughly, to give linear types also a non-linear interpretation. This is also called the “of course”-modality or the storage modality, and sometimes the “bang”-operation.
+Trong linear logic đây đủ, có 1 phương thức (modality) kí hiệu là $!$ và được gọi là phương thức số mũ. Nó có vai trò là cho loại tuến tính dạng không tuyến tính. Nó có tên gọi trong tiếng anh là "of coiurse" hay "bang".
+\textbf{Ví dụ \thesubsection.1:}
+
 \subsection{Chi tiết và ví dụ về phép toán ?}
 In classical linear logic (meaning with involutive de Morgan duality), the de Morgan dual of “!” is denoted “?” and called the “why not”-modality.
 
