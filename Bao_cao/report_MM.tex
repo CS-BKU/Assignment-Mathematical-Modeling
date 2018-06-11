@@ -34,7 +34,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage[]{algorithm2e}
-\floatname{algorithm}{Function}
+\floatname{algorithm}{Giải thuật}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
@@ -280,40 +280,63 @@ Trong logic cổ điển và logic trực quan, nếu có $A$ và $A \rightarrow
 \subsection{Chi tiết và ví dụ về phép hội tuyến tính - nhân (linear conjunction - times)}
 Trong linear logic phép hội tuyến tính được kí hiệu là $\otimes$. Giống với phép $\land$, phép $\otimes$ có nghĩa là có cả 2.\\
 
-\textbf{Ví dụ \thesubsection.2:} Ta có phương trình hóa học quen thuộc $2H_2 + O_2 \rightarrow 2H_2O$ thì trong linear logic phương trình được biểu diễn là $H_2 \otimes H_2 \otimes O_2 \multimap H_2O \otimes H_2O$ (có 2 $H_2$ và 1 $O_2$ thì ra có 2 $H_2O$ nhưng sẽ không còn nhưng chất trước phản ứng nữa).
+\textbf{Ví dụ \thesubsection.1:} Ta có phương trình hóa học quen thuộc $2H_2 + O_2 \rightarrow 2H_2O$ thì trong linear logic phương trình được biểu diễn là:
+\begin{center}
+$H_2 \otimes H_2 \otimes O_2 \multimap H_2O \otimes H_2O$    
+\end{center}
+Có 2 $H_2$ và 1 $O_2$ thì ra có 2 $H_2O$ nhưng sẽ không còn nhưng chất trước phản ứng nữa.
 
 \subsection{Chi tiết và ví dụ về phép hội tuyến tính ("additive conjunction" hoặc "with")}
-Phép hội tuyến tính "with" là một phép có trong linear logic nhưng không có trong logic cổ điển và được kí hiệu là $\with$. Khác với phép $\land$ va phép $\otimes$, phép $\with$ có nghĩa là có 1 trong 2.\\
+Phép hội tuyến tính "with" là một phép có trong linear logic nhưng không có trong logic cổ điển và được kí hiệu là $\with$. Khác với phép $\land$ va phép $\otimes$, phép $\with$ có nghĩa là chọn 1 trong 2 và cho phép chọn là cái này hoặc cái kia.\\
 
-\textbf{Ví dụ \thesubsection.1:} Cho A là "có 5000 đồng", B là "có 1 chai nước suối" và C là "có 1 cây bút bi". Ta sẽ có biểu thức $A \multimap B \with C$ nghĩa là "với 5000 đồng ta có thể có 1 chia nước hoặc 1 cây bút bi, nhưng chỉ 1 trong hai, chai nước hoặc cây bút bi".
+\textbf{Ví dụ \thesubsection.1:} Cho A là "có 5000 đồng", B là "có 1 chai nước suối" và C là "có 1 cây bút bi". Ta sẽ có biểu thức $A \multimap B \with C$ nghĩa là "với 5000 đồng ta có thể có 1 chia nước hoặc 1 cây bút bi, nhưng chỉ 1 trong hai, chai nước hoặc cây bút bi và ta có quyền được chọn".
 
 \subsection{Chi tiết và ví dụ về phép tuyển tuyến tính - cộng (linear disjunction - plus)}
-Trong linear logic, phép đối ngẫu của phép $\with$ là phép tuyển tuyến tính - cộng được kí hiệu là $\oplus$. Giống với phép $\lor$, phép $\oplus$ có nghĩa là hoặc cái này hoặc cái kia.\\
+Trong linear logic, phép đối ngẫu của phép $\with$ là phép tuyển tuyến tính - cộng được kí hiệu là $\oplus$. Giống với phép $\lor$ trong logic cổ điển, phép $\oplus$ có nghĩa là hoặc cái này hoặc cái kia.\\
 
-\textbf{Ví dụ \thesubsection.1:} Tương tự với B và C ở các ví dụ trên, biểu thức $B \oplus C$ nghĩa là "hoặc có 1 chai nước suối hoặc có 1 cây bút bi, nhưng không biết có cái nào".
+\textbf{Ví dụ \thesubsection.1:} Trong 1 cuộc thi bốc thăm trúng thưởng thì chắc chắnđược 1 trong 2 loại phiếu thăm và phần thưởng tương ứng khi bốc được là "1 chai nước" hay "1 cây bút bi". Cho A là "hành động rút thăm", B là "trúng 1 chai nước suối" và C là "trúng 1 cây bút bi". Khi đó, thì biểu thức $A \multimap B \oplus C$ nghĩa là "khi bốc thăm thì sẽ trúng 1 chai nước hoặc 1 câu bút bi nhưng không biết là cái nào".
 
 \subsection{Chi tiết và ví dụ về phép tuyển tuyến tính (“par”)}
 Đối ngẫu với phép $\otimes$ là phép tuyển tuyến tính $\parr$. Phép $\parr$ tương đối khó hiểu. Biểu thức $A \parr B$ có thể được biểu diễn dưới dạng khác là $A^{\bot} \multimap B$ hay $B^{\bot} \multimap A$. Nó có nghĩa là "phải lựa chọn giữa A và B, không được chọn cả 2".\\
 
-\textbf{Ví dụ \thesubsection.1:} Tương tự với A,B và C ở các ví dụ trên, biểu thức $A \multimap B \parr C$ nghĩa là "có 5000 đồng thì buộc phải chọn giữa 1 chai nước suối hoặc 1 cây bút bí, chứ không chọn cả 2". Trong khi đó biểu thức $A \multimap B \with C$ nghĩa là "có 5000 đồng thì sẽ có 1 chai nước suối hoặc 1 cây bút bi, nhưng không buốc chọn cũng không biết cái nào sẽ được chọn".
+\textbf{Ví dụ \thesubsection.1:} Ta xét biểu sau:
+\begin{center}
+$bullet \otimes ShootAt(bullet, target) \multimap HIT(bullet, target) \parr MISS(bullet, target)$
+\end{center}
+Theo như ngữ cảnh, khi có 1 viện đạn và bắn viên đạn đó thì viên đạn chỉ có thể trúng hoặc không trúng mục tiêu, không thể có chuyện vừa dính vừa không mục tiêu.
 
 \subsection{Chi tiết và ví dụ về phép toán $\bot$}
-Trong linear logic, có cách biểu diễn sự sai - cộng, kí hiệu là $0$ và sự sai nhân, kí hiệu là $\bot$. Mặc dù kí hiệu như vậy, $0$ mới là phần tử đáy của mạng các chân trị tuyến tính. (Cụ thể là $0 \vdash \bot$ nhưng $\bot \nvdash 0$).
+Trong linear logic, phép phủ định tuyến tính $\bot$ giống như trong logic cổ điển. $A^{\bot}$ là phủ định tuyến tính của $A$, tương tự như phép negation $\lnot$ trong logic cổ điển. \\
+
+\textbf{Ví dụ \thesubsection.1:} Ta xét các biểu thức sau:\\
+\begin{center}
+    $(pen)^{\bot}$ (1)\\
+    $(!bottle)^{\bot}$ (2)
+\end{center}
+Biểu thức (1) nghĩa là "không có cây bút" và biểu thức 2 nghĩa là "không có vô hạn chai nước". Biểu thức (2) cũng có thể hiểu là có một vài chai nước và có thể được biểu diễn là $?bottle$.
 
 \subsection{Chi tiết và ví dụ về phép toán $\top$}
-%%In linear logic, there is both additive truth, denoted ⊤, and multiplicative truth, denoted 1. As the notation suggests, it is ⊤ that is the top element of the lattice of linear truth values. (In particular, 1⊢⊤ but ⊤⊬1.)
-Trong linear logic, có cách biểu diễn sự thật - cộng, kí hiệu là $\top$ và cách biểu diện sự thật - nhân $1$. Như cách kí hiệu, $\top$ là phần tử trên cùng của mạng các chân trị tuyến tính. (Cụ thể là $1 \vdash \top$ nhưng $\top \nvdash 1$)
+Phép toán $\top$ trong linear logic là một hằng. $\top$ có thể được dẫn ra từ bất cứ gì ($A \vdash \top$, $B \vdash \top$ , v.v).\\
 
+\textbf{Ví dụ \thesubsection.1:} Ta xét các biểu thức sau với A' là "có 10000 đồng", B là "có 1 chai nước suối" và C là "có 1 câu bút bị". Xét biểu thức:\\
+\begin{center}
+    $A' \multimap (B \otimes C)$
+\end{center}
+Biểu thức trên có nghĩa là nêu có 10000 đồng và ta tiêu nó thì ta có thể có được cả 1 chai nước và 1 cây bút bi. Nhưng nếu ta chỉ muốn mua 1 chai nước suối mà không mua cây bút bi thì ta có thể biểu diễn bằng cách:\\
+\begin{center}
+    $A' \multimap (B \otimes \top)$
+\end{center}
+Phép $\top$ ở dây được sử dụng để loại bỏ đi lữa chọn mà ta không mong muốn.
 
-\subsection{Chi tiết và ví dụ về phép toán $!$}
-%%In full linear logic/linear type theory there is assumed a (comonadic) modality denoted “!” and called the exponential modality, whose role is, roughly, to give linear types also a non-linear interpretation. This is also called the “of course”-modality or the storage modality, and sometimes the “bang”-operation.
-Trong linear logic đây đủ, có 1 phương thức (modality) kí hiệu là $!$ và được gọi là phương thức số mũ. Nó có vai trò là cho chuyển đổi loại tuyến tính sang dạng không tuyến tính. Nó có tên gọi trong tiếng anh là "of course" hay "bang".\\
-\textbf{Ví dụ \thesubsection.1:}
+\subsection{Chi tiết và ví dụ về phép toán $!$} 
+Phép $!$ có tên gọi trong tiếng anh là "of course" hay "bang". Nó được sử dụng để mã hóa mệnh đềnh đúng. biểu thức $!A$ có nghĩa là lặp lại $A$ vô hạn lần. Khi đó biểu thức $!A \multimap B$ sẽ giống với biểu thức $A \Rightarrow B$ trong logic cổ điển vì bây giờ A tuy bị chi tiêu mất đi thì vẫn còn A.\\
+
+\textbf{Ví dụ \thesubsection.1:} Cho A là "có 1 tờ tiền 5000 đồng" thì $!A$ sẽ là "có vô hạn tờ tiền 5000 đồng". Ta cũng sẽ có biểu thức $!A \multimap B$ (có vô hạn tờ 5000 đồng sẽ mua được vô hạn chai nước suối).
 
 \subsection{Chi tiết và ví dụ về phép toán $?$}
-%%In classical linear logic (meaning with involutive de Morgan duality), the de Morgan dual of “!” is denoted “?” and called the “why not”-modality.
-Torng linear logic cổ điển (với tính đối ngẫu de Morgan), ký tự de Morgan đối ngẫu của "$!$" được biểu diễn là "$?$" và được gọi là phép toán "why not".
+Trong linear logic cổ điển (với tính đối ngẫu de Morgan), ký tự đối ngẫu de Morgan của "$!$" được biểu diễn là "$?$" và được gọi là phép toán "why not". Gần giống với lượng từ "tồn tại $\exists$" và phép $!$ giống với "với mọi $\forall$ trong logic vị từ. Nếu $!$ là có vô hạn thì $?$ sẽ chỉ là có thể có. Biểu thức $?A$ có nghĩa là có thể có A.\\
 
+\textbf{Ví dụ \thesubsection.1:} Tiếp tục ví dụ \textbf{1.12.1} nhưng lần này ta xét biểu thức $?A \multimap B$. Biểu thức sẽ có nghĩa là "ta có 1 số tờ tiền 5000 đồng nhất định và ta có thể dùng nó để mua nước."
 
 \section{Bài toán 2}
 \subsection{Mô tả ngữ cảnh bằng lời}
@@ -356,7 +379,7 @@ Tham gia vào các điều khoản có các chủ thể sau:\\
 \textbf{Article 7:} Hết thời gian times, vật phẩm không ai đấu giá, smart contract sẽ hoàn trả vật phẩm cho bên A.\\
 \textbf{Aritcle 8:} Hết thời gian times, nếu vật phẩm có người đấu giá, smart contract sẽ chuyển vật phẩm cho bên C, và chuyển tiền cho bên A.\\
 
-\section{Bài toán 3}
+\section{Bài toán 3: Sử dụng các kiến thức về linear logic để đặc tả ngữ cảnh trong Bài tập 2}
 Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2}} như sau:
 \begin{itemize}
     \item B phải đặt số tiền y không vượt quá số tiền hiện có để tham gia đấu giá vật phẩm\\
@@ -410,99 +433,64 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
     \end{center}
 \end{itemize}
 
-\section{Bài toán 4}
-Mã giả để lập trình smart contract minh họa cho ngữ cảnh được đưa ra ở mục \textbf{2.1}.\\
+\section{Bài toán 4: Sử dụng mã giả để lập trình smart contract minh họa cho ngữ cảnh được đưa ra
+trong Bài tập 2}
+Mã giả để lập trình smart contract minh họa cho ngữ cảnh được đưa ra ở mục \textbf{2.1}. Trong bài tập lớn này, mặc định việc hệ thống xử lý mã item của sản phẩm là có sẵn.\\
 
 
 
 \begin{algorithm}
- \textbf{Input} item* object, player* seller\\
- \textbf{Output:}\\
- \begin{algorithmic}
-    \State object->SP\_id  -= seller->user\_ID;
-    \State \Return true;
- \end{algorithmic}
- \caption{Auction\_confirm}
-\end{algorithm}
-
-\begin{algorithm}
- \textbf{Input:} item*object,player*seller\\
+ \textbf{Input:} highestBidder, highestBid, player, newBiddingValue, timestamp\_contract, ended\\
  textbf{Output:}\\
  
-    \If {Auction\_confirm(object,seller)}{
-        \State seller input the price (coins)  for object item;
-        \State seller input expire time (hours) for this auction;
-        \State object->price = price from input;
-        \State update auction\_table; //to upload item to auction table so other players can see it
+    \If {Converting system time to timestamp <= timestamp\_contract \textbf{and} boolean(ended) = false)}
+    {
+        \If{newBiddingValue > highestBid}
+        {
+            \If{exists(highestBidder)}
+            {
+                \State transfer money(highestBid) to the highestBidder;
+            }
+            \EndIf
         }
+        \EndIf
+    }
     \EndIf
     
- \caption{auctionOption}
-\end{algorithm}
-    
-\begin{algorithm}
- \textbf{Input:} player*objectPlayer,money*amount\\
-  \textbf{Output:}\\
-    \State objectPlayer ->money += amount;
-    
-    \caption{getMoneyBack}
+ \caption{Chọn người trả giá cao hơn và hoàn tiền cho người trả giá cao nhất trước đó}
 \end{algorithm}
 
 \begin{algorithm}
-\textbf{Input:}  player*owner,item*object,player*CurPlayer\\
-\textbf{Output:}\\
-    \State Object->SP\_id += owner->user\_ID;
-	\State Return (item) to (player who owns that item’s inventory);
-	\State CurPlayer->money $\gets$ CurPlayer->money + amount;
-\caption{cancelAuction}
-\end{algorithm}
-
-\begin{algorithm}
-\textbf{Input:} item*object, money*amount, player*Curbuyer, player*Prebuyer, player* owner\\
-\textbf{Output:}\\
-    \If {object->expire\_time is not expired}
+ \textbf{Input:} owner, highestBidder, highestBid, itemKey, timestamp\_contract, ended\\
+ textbf{Output:}\\
+ 
+    \If {Converting system time to timestamp >= timestamp\_contract \textbf{and} boolean(ended) = false)}
     {
-        \If{amount <= object->price}
+        \If{exists(highestBidder)}
         {
-            \State \textbf{Show}  “Cannot auction with this amount of money”;
-            \State \textbf{Ask} “Please, choose your valid amount”;
+            \State Transfer money(highestBid) to owner;
+            \State Transfer code(itemKey) to highestBidder;
+            \State Cancel the possession of the owner to the key;
         }
-        
         \Else
         {
-            \If {amount > Curbuyer->money}
-            {
-                \State \textbf{Show} errror " you dont have enough money ! "
-				\State \textbf{Ask} for a new valid amount of money “Please, choose your valid amount”
-            }
-            \Else{
-                \State getMoneyBack(prebuyer,object->price);
-			    \State object->price = amount;
-			    \State Curbuyer->money -= amount;
-			}
+            \State Transfer code(itemKey) to owner;
         }
+        
     }
     \Else
     {
-        \If{amount=0}
-        {
-            \State object->SP\_id += owner\_id;
-        }
-        \Else
-        {
-            \State object->SP\_id += Curbuyer->user\_id;
-			\State Sends Item to Current player inventory	
-			\State Owner->money += amount;
-        }
+        \State Waiting for the auction to end;
     }
-\caption{Auction}
+    
+ \caption{Giao dịch khi phiên đấu giá kết thúc}
 \end{algorithm}
-
 
 \newpage
 
 
-\section{Bài toán 5}
+\section{Bài toán 5: Sử dụng Solidity hoặc Go để lập trình smart contract minh họa cho ngữ cảnh trong
+Bài tập 2}
 \begin{frame}
 \frametitle{AuctionItem.sol}
 \lstset{language=C++,
@@ -621,6 +609,116 @@ contract AuctionItem
             "Phien dau gia ket thuc!"
         );
         
+        // Phien dau gia phai dang trong qua tripragma solidity ^0.4.24;
+
+import "./DateTime.sol";
+contract AuctionItem
+{
+    address public owner; // nguoi dem vat pham di dau gia
+    uint public auctionEnd; // thoi gian ket thuc
+    DateTime dt;
+
+    // Trang thai hien tai cua qua trinh dau gia
+    address public highestBidder; // nguoi dau gia cao nhat
+    uint public highestBid; // gia dau cao nhat
+    uint public defaultBid; // gia dau khoi diem
+
+    // Cho phep nguoi dau gia thap hon rut tien lai
+    mapping(address => uint) pendingReturns;
+    // Ma vat pham
+    mapping(address => string) itemKey;
+
+    // Cho phep nguoi dem vat pham di dau gia huy ban dau gia.
+    // Neu cuoc ban dau gia khong bi huy thi se duoc gan gia tri true khi
+    // ket thuc phien dau gia nham khong cho phep su can thiep sau thoi han.
+    bool ended = false;
+
+    // Cac su kien trong phien dau gia
+    /// Gia dau tang!
+    event HighestBidIncreased(address bidder, uint amount);
+    /// Ket thuc!
+    event AuctionEnded(address winner, uint amount);
+
+    /// Tao mot hop dong dau gia thong minh voi thoi gian dau gia la
+    /// '_biddingTime' giay, muc gia khoi diem la '_defaultBid' wei
+    /// , vat pham co ma dinh danh '_itemKey'
+    /// nguoi dem vat pham di dau gia co dia chi '_owner'.
+    /// Thoi gian dau gia co the duoc dieu chinh lai.
+    constructor(
+        uint _biddingTime,
+        address _owner,
+        uint _defaultBid,
+        string _itemKey,
+        address addrDatetime
+    ) public {
+        owner = _owner;
+        auctionEnd = now + _biddingTime;
+        highestBid = _defaultBid;
+        defaultBid = _defaultBid;
+        itemKey[owner] = _itemKey;
+        dt = DateTime(addrDatetime);
+    }
+
+    /// Thay doi tinh trang hop dong boi nguoi dem vat pham di dau gia
+    modifier onlyBy(address account) {
+        require(
+            msg.sender == account,
+            "Khong co quyen thuc hien."
+        );
+        _;
+    }
+    
+    /// Huy phien dau gia hien tai!
+    function cancel() public onlyBy(owner){
+        ended = true;
+        // Tra tien lai cho nguoi dau gia
+        if (highestBid != defaultBid) {
+            // De nguoi choi tu rut tien
+            pendingReturns[highestBidder] += highestBid;
+            delete highestBidder;
+            highestBid = defaultBid;
+        }
+    }
+    
+    /// Kich hoat lai phien dau gia!
+    function activeAgain() public onlyBy(owner) {
+        // Chi duoc kich hoat lai khi con thoi gian dau gia.
+        require(now <= auctionEnd, "Khong the kich hoat lai.");
+        ended = false;
+    }
+    
+    /// Dat thoi gian ket thuc dau gia neu muon thoi gian dau gia keo dai hon.
+    function alterAuctionEndTime (
+        uint16 year, 
+        uint8 month, 
+        uint8 day, 
+        uint8 hour,
+        uint8 minute,
+        uint8 second
+    ) public
+      onlyBy(owner) {
+      	require(
+	    !ended, "Phien da ket thuc! Khong the thay doi!"
+	);
+        uint timeStamp = 
+            dt.toTimestamp(year, month, day, hour, minute, second);
+	require(
+	    timeStamp > auctionEnd
+	    , "Thoi han moi khong lon hon thoi han ban dau!"
+	);
+	auctionEnd = timeStamp;
+    }
+
+    /// Dau gia voi so tien di kem giao dich nay.
+    /// Tien chi duoc hoan lai neu ban khong thang.
+    function bid() public payable {
+        
+        // Huy giao dich neu qua han.
+        require(
+            now <= auctionEnd,
+            "Phien dau gia ket thuc!"
+        );
+        
         // Phien dau gia phai dang trong qua trình hoat dong
         require(
             !ended,
@@ -665,11 +763,11 @@ contract AuctionItem
         return true;
     }
 
-    /// Ket thuc phien dau gia, gui tien cho nguoi đem vat phẩm đi đấu giá,
+    /// Ket thuc phien dau gia, gui tien cho nguoi đem vat pham đi dau gia,
     /// gui ma vat pham cho nguoi thang cuoc.
     function auctionEnd() public {
         // 1. Conditions
-        require(now >= auctionEnd, "Phien dau gia chu ket thuc.");
+        require(now >= auctionEnd, "Phien dau gia chua ket thuc.");
         require(!ended, "Phien dau gia khong hoat dong.");
 
         // 2. Effects
@@ -678,17 +776,19 @@ contract AuctionItem
 
         // 3. Interaction
         // Neu co nguoi dau gia
-		if (highestBid != defaultBid) {
-    		owner.transfer(highestBid);
-    		itemKey[highestBidder] = itemKey[owner];
-    		itemKey[owner] = "";
-		}
-		// else do nothing
-		// Thuc te thi he thong se tra lai vat pham cho nguoi dem no di dau gia.
+	if (highestBid != defaultBid) {
+	    owner.transfer(highestBid);
+	    itemKey[highestBidder] = itemKey[owner];
+	    itemKey[owner] = "";
+	}
+	// else do nothing
+	// Thuc te thi he thong se tra lai vat pham cho nguoi dem no di dau gia.
     }
 }
 \end{lstlisting}
-\end{frame}
+\end{frame}\\
+
+File "DateTime.sol" sử dụng lại từ code mẫu trong đề bài tập lớn.
 
 \begin{frame}
 \frametitle{DateTime.sol}
