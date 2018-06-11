@@ -86,6 +86,9 @@ contract AuctionItem
         uint8 second
     ) public
       onlyBy(owner) {
+      	require(
+	    !ended, "Phien da ket thuc! Khong the thay doi!"
+	);
         uint timeStamp = 
             dt.toTimestamp(year, month, day, hour, minute, second);
 	require(
