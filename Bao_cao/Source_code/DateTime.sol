@@ -61,10 +61,10 @@ contract DateTime {
 
         // Year
         dt. year = getYear(timestamp);
-        buf = leapYearsBefore(dt. year) - leapYearsBefore(ORIGIN_YEAR);
+        buf = leapYearsBefore(dt.year) - leapYearsBefore(ORIGIN_YEAR);
 
         secondsAccountedFor += LEAP_YEAR_IN_SECONDS * buf;
-        secondsAccountedFor += YEAR_IN_SECONDS * (dt. year - ORIGIN_YEAR - buf);
+        secondsAccountedFor += YEAR_IN_SECONDS * (dt.year - ORIGIN_YEAR - buf);
 
         // Month
         uint secondsInMonth;
