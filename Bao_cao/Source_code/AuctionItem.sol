@@ -59,6 +59,10 @@ contract AuctionItem
     
     /// Huy phien dau gia hien tai!
     function cancel() public onlyBy(owner){
+    	require(
+            !ended,
+            "Phien da ket thuc! Khong the thay doi!"
+        );
         ended = true;
         // Tra tien lai cho nguoi dau gia
         if (highestBid != defaultBid) {
