@@ -29,7 +29,7 @@ contract AuctionItem
     event AuctionEnded(address winner, uint amount);
 
     /// Tao mot hop dong dau gia thong minh voi thoi gian dau gia la
-    /// '_biddingTime' giay, muc gia khoi diem la '_defaultBid' Ether
+    /// '_biddingTime' giay, muc gia khoi diem la '_defaultBid' wei
     /// , vat pham co ma dinh danh '_itemKey'
     /// nguoi dem vat pham di dau gia co dia chi '_owner'.
     /// Thoi gian dau gia co the duoc dieu chinh lai.
