@@ -67,6 +67,43 @@
  
 \lstset{style=mystyle}
 
+\usepackage{listings, xcolor}
+
+\definecolor{verylightgray}{rgb}{.97,.97,.97}
+
+\lstdefinelanguage{Solidity}{
+	keywords=[1]{anonymous, assembly, assert, balance, break, call, callcode, case, catch, class, constant, continue, contract, debugger, default, delegatecall, delete, do, else, emit, event, export, external, false, finally, for, function, gas, if, implements, import, in, indexed, instanceof, interface, internal, is, length, library, log0, log1, log2, log3, log4, memory, modifier, new, payable, pragma, private, protected, public, pure, push, require, return, returns, revert, selfdestruct, send, storage, struct, suicide, super, switch, then, this, throw, transfer, true, try, typeof, using, value, view, while, with, addmod, ecrecover, keccak256, mulmod, ripemd160, sha256, sha3}, % generic keywords including crypto operations
+	keywordstyle=[1]\color{blue}\bfseries,
+	keywords=[2]{address, bool, byte, bytes, bytes1, bytes2, bytes3, bytes4, bytes5, bytes6, bytes7, bytes8, bytes9, bytes10, bytes11, bytes12, bytes13, bytes14, bytes15, bytes16, bytes17, bytes18, bytes19, bytes20, bytes21, bytes22, bytes23, bytes24, bytes25, bytes26, bytes27, bytes28, bytes29, bytes30, bytes31, bytes32, enum, int, int8, int16, int24, int32, int40, int48, int56, int64, int72, int80, int88, int96, int104, int112, int120, int128, int136, int144, int152, int160, int168, int176, int184, int192, int200, int208, int216, int224, int232, int240, int248, int256, mapping, string, uint, uint8, uint16, uint24, uint32, uint40, uint48, uint56, uint64, uint72, uint80, uint88, uint96, uint104, uint112, uint120, uint128, uint136, uint144, uint152, uint160, uint168, uint176, uint184, uint192, uint200, uint208, uint216, uint224, uint232, uint240, uint248, uint256, var, void, ether, finney, szabo, wei, days, hours, minutes, seconds, weeks, years},	% types; money and time units
+	keywordstyle=[2]\color{teal}\bfseries,
+	keywords=[3]{block, blockhash, coinbase, difficulty, gaslimit, number, timestamp, msg, data, gas, sender, sig, value, now, tx, gasprice, origin},	% environment variables
+	keywordstyle=[3]\color{violet}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{gray}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	language=Solidity,
+	backgroundcolor=\color{verylightgray},
+	extendedchars=true,
+	basicstyle=\footnotesize\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}
+
 
 \usetikzlibrary{arrows,snakes,backgrounds}
 \usepackage[unicode]{hyperref}
@@ -228,6 +265,7 @@ Vào năm 2008, Bitcoin, đồng tiền kỹ thuật số hoàn chỉnh đầu t
 Đây chỉ là một số trong số rất nhiều ứng dụng của hợp đồng thông minh.
 \subsubsection{Ứng dụng vào bảo hiểm}
 Smart contract giúp cải thiện trải nghiệm của người dùng cũng như giảm thiểu những sai sót và chi phí trong quá trình giao dịch bảo hiểm. Blockchain cũng như Smart contract tăng tốc quá trình xử lí yêu cầu/ trao trả bảo hiểm, tránh được những lỗi sai sót so với làm bằng tay.\\
+
 Smart contract cũng giúp tự động hóa việc chuyển tiền đến người sử dụng bảo hiểm và cũng đảm bảo được hợp đồng là hợp lệ. Ví dụ như một người sửa xe của anh ấy chỉ nhận được tiền bảo hiểm nếu anh ta sửa xe tại cửa hàng được chứng nhận và phải có sự xác nhận bởi người thợ sửa xe đó. Một ví dụ khác, smart contract có thể ghi lại các thông tin về thời tiết lên blockchain, sau đó nó đọc thông tin này và trả tiền bồi thường cho chuyến bay của những hành khách mà bị hủy hay bị hoãn do thời tiết xấu. Nó cũng có thể kết hợp với công nghệ IoT và các cảm biến để theo dõi sự hư tổn của các thiết bị trong nhà để có thể tự động đền bù hoặc hỗ trợ chủ nhân ngôi nhà gọi người sửa chữa đến.
 
 \subsubsection{Ứng dụng trong chuỗi cung ứng(logistic)}
@@ -318,7 +356,7 @@ Biểu thức (1) nghĩa là "không có cây bút" và biểu thức 2 nghĩa l
 \subsection{Chi tiết và ví dụ về phép toán $\top$}
 Phép toán $\top$ trong linear logic là một hằng. $\top$ có thể được dẫn ra từ bất cứ gì ($A \vdash \top$, $B \vdash \top$ , v.v).\\
 
-\textbf{Ví dụ \thesubsection.1:} Ta xét các biểu thức sau với A' là "có 10000 đồng", B là "có 1 chai nước suối" và C là "có 1 câu bút bi". Xét biểu thức:\\
+\textbf{Ví dụ \thesubsection.1:} Ta xét các biểu thức sau với A' là "có 10000 đồng", B là "có 1 chai nước suối" và C là "có 1 cây bút bi". Xét biểu thức:\\
 \begin{center}
     $A' \multimap (B \otimes C)$
 \end{center}
@@ -437,34 +475,31 @@ Các điều khoản được nêu ra ở mục \hyperref[dieukhoan]{\textbf{2.2
 trong Bài tập 2}
 Mã giả để lập trình smart contract minh họa cho ngữ cảnh được đưa ra ở mục \textbf{2.1}. Trong bài tập lớn này, mặc định việc hệ thống xử lý mã item của sản phẩm là có sẵn.\\
 
-
-
 \begin{algorithm}
  \textbf{Input:} highestBidder, highestBid, player, newBiddingValue, timestamp\_contract, ended\\
- textbf{Output:}\\
+ \textbf{Output:}\\
  
-    \If {Converting system time to timestamp <= timestamp\_contract \textbf{and} boolean(ended) = false)}
+    \If {Converting system time to timestamp <= timestamp\_contract \textbf{and} boolean(ended) = false}
     {
         \If{newBiddingValue > highestBid}
         {
             \If{exists(highestBidder)}
             {
-                \State transfer money(highestBid) to the highestBidder;
+                \State Transfer money(highestBid) to the highestBidder;
             }
-            \EndIf
+            highestBidder = player;\\
+            highestBid = newBiddingValue;
         }
-        \EndIf
     }
-    \EndIf
     
  \caption{Chọn người trả giá cao hơn và hoàn tiền cho người trả giá cao nhất trước đó}
 \end{algorithm}
 
 \begin{algorithm}
  \textbf{Input:} owner, highestBidder, highestBid, itemKey, timestamp\_contract, ended\\
- textbf{Output:}\\
+ \textbf{Output:}\\
  
-    \If {Converting system time to timestamp >= timestamp\_contract \textbf{and} boolean(ended) = false)}
+    \If {Converting system time to timestamp >= timestamp\_contract \textbf{and} boolean(ended) = false}
     {
         \If{exists(highestBidder)}
         {
@@ -476,14 +511,40 @@ Mã giả để lập trình smart contract minh họa cho ngữ cảnh được
         {
             \State Transfer code(itemKey) to owner;
         }
-        
+        boolean(ended) := true;
     }
     \Else
     {
-        \State Waiting for the auction to end;
+        \If{boolean(ended) = false}
+        {
+            // We can assure that this case happens only when there is still time for auctioning.
+            \State So just wait for the auction to end;
+        }
+        \Else
+        {
+            // The Auction has been canceld or ended.
+            \State Do nothing;
+        }
     }
     
  \caption{Giao dịch khi phiên đấu giá kết thúc}
+\end{algorithm}
+
+\begin{algorithm}
+ \textbf{Input:} owner, highestBidder, highestBid, ended\\
+ \textbf{Output:}\\
+    \If {authorized(owner) \textbf{and} boolean(ended) = false}
+    {
+        boolean(ended) := true;\\
+        \If{exists(highestBidder)}
+        {
+            \State Transfer money(highestBid) to highestBidder;
+            \State Clear information of the highestBidder;
+            \State Set back highestBid to the default value that the contract has initialized;
+        }
+    }
+    
+ \caption{Hủy đấu giá vật phẩm}
 \end{algorithm}
 
 \newpage
@@ -493,14 +554,10 @@ Mã giả để lập trình smart contract minh họa cho ngữ cảnh được
 Bài tập 2}
 \begin{frame}
 \frametitle{AuctionItem.sol}
-\lstset{language=C++,
-                basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
-}
-\begin{lstlisting}[basicstyle=\small]
+%\lstset{language=solidity
+                
+%}
+\begin{lstlisting}[language = Solidity]
 pragma solidity ^0.4.24;
 
 import "./DateTime.sol";
@@ -562,6 +619,10 @@ contract AuctionItem
     
     /// Huy phien dau gia hien tai!
     function cancel() public onlyBy(owner){
+        require(
+            !ended,
+            "Phien da ket thuc! Khong the thay doi!"
+        );
         ended = true;
         // Tra tien lai cho nguoi dau gia
         if (highestBid != defaultBid) {
@@ -595,11 +656,11 @@ contract AuctionItem
       	);
         uint timeStamp = 
             dt.toTimestamp(year, month, day, hour, minute, second);
-	    require(
-	        timeStamp > auctionEnd, 
-	        "Thoi han moi khong lon hon thoi han ban dau!"
-	    );
-	    auctionEnd = timeStamp;
+        require(
+            timeStamp > auctionEnd, 
+            "Thoi han moi khong lon hon thoi han ban dau!"
+        );
+        auctionEnd = timeStamp;
     }
 
     /// Dau gia voi so tien di kem giao dich nay.
@@ -675,13 +736,13 @@ contract AuctionItem
 
         // 3. Interaction
         // Neu co nguoi dau gia
-	if (highestBid != defaultBid) {
-	    owner.transfer(highestBid);
-	    itemKey[highestBidder] = itemKey[owner];
-	    itemKey[owner] = "";
-	}
-	// else do nothing
-	// Thuc te thi he thong se tra lai vat pham cho nguoi dem no di dau gia.
+        if (highestBid != defaultBid) {
+            owner.transfer(highestBid);
+            itemKey[highestBidder] = itemKey[owner];
+            itemKey[owner] = "";
+        }
+        // else do nothing
+        // Thuc te thi he thong se tra lai vat pham chonguoi dem no di dau gia.
     }
 }
 \end{lstlisting}
@@ -691,14 +752,14 @@ File "DateTime.sol" sử dụng lại từ code mẫu trong đề bài tập l�
 
 \begin{frame}
 \frametitle{DateTime.sol}
-\lstset{language=C++,
-                basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
-}
-\begin{lstlisting}[basicstyle=\small]
+%\lstset{language=C++,
+%                basicstyle=\ttfamily,
+%                keywordstyle=\color{blue}\ttfamily,
+%                stringstyle=\color{red}\ttfamily,
+%                commentstyle=\color{green}\ttfamily,
+%                morecomment=[l][\color{magenta}]{\#}
+%}
+\begin{lstlisting}[language = Solidity] %basicstyle=\small]
 pragma solidity ^0.4.24;
 
 contract DateTime {
@@ -762,10 +823,10 @@ contract DateTime {
 
         // Year
         dt. year = getYear(timestamp);
-        buf = leapYearsBefore(dt. year) - leapYearsBefore(ORIGIN_YEAR);
+        buf = leapYearsBefore(dt.year) - leapYearsBefore(ORIGIN_YEAR);
 
         secondsAccountedFor += LEAP_YEAR_IN_SECONDS * buf;
-        secondsAccountedFor += YEAR_IN_SECONDS * (dt. year - ORIGIN_YEAR - buf);
+        secondsAccountedFor += YEAR_IN_SECONDS * (dt.year - ORIGIN_YEAR - buf);
 
         // Month
         uint secondsInMonth;
@@ -911,15 +972,16 @@ contract DateTime {
 \addcontentsline{toc}{section}{Tài liệu}
 \begin{thebibliography}{99999}
 \bibitem[Alex93]{Alex93}{Vladimir Alexiev.} {\em Applications of Linear Logic to Computation: An Overview}, 1993.
+\bibitem[Sza96]{Sza96}{Nick Szabo.} {\em Smart Contracts: Building Blocks for Digital Markets.}. Trên Extropy \#16, 1996.
+\bibitem[Lin96]{Lin96}{Patrick Lincoln.} {\em Computational Aspects of Linear Logic.} Nhà xuất bản MIT thuộc Viện Công nghệ Massachusetts (1996), trang 2.
 \bibitem[Ser18]{Ser18}{Sergy Nosikov.} {\em What are smart contracts?}\\
 {https://www.cryptoninjas.net/what-are-smart-contracts/}. Truy cập vào 01/6/2018.
-\bibitem[Sza96]{Sza96}{Nick Szabo.} {\em Smart Contracts: Building Blocks for Digital Markets.}. Trên Extropy \#16, 1996.
-\bibitem{Blockgeeks team.}{\em Smart Contracts: The Blockchain Technology That Will Replace Lawyers.}\\ {https://blockgeeks.com/guides/smart-contracts/}. Truy cập vào 01/6/2018.
-\bibitem{Lester Coleman.} {\em Smart Contracts: 12 Use Cases For Business And Beyond.}\\
+\bibitem{Blo18} Blockgeeks team. {\em Smart Contracts: The Blockchain Technology That Will Replace Lawyers.}\\ {https://blockgeeks.com/guides/smart-contracts/}. Truy cập vào 01/6/2018.
+\bibitem{Col18} Lester Coleman. {\em Smart Contracts: 12 Use Cases For Business And Beyond.}\\
 {https://www.ccn.com/smart-contracts-12-use-cases-for-business-and-beyond/}. Truy cập vào 01/6/2018.
-\bibitem{Laura Cox.} {\em 5 Applications Of Smart Contracts.}\\
+\bibitem{Cox18} Laura Cox. {\em 5 Applications Of Smart Contracts.}\\
 {https://disruptionhub.com/smart-contract-uses/}. Truy cập vào 01/6/2018.
-\bibitem{Patrick Lincoln.} {\em Computational Aspects of Linear Logic.} Nhà xuất bản MIT thuộc Viện Công nghệ Massachusetts (1996), trang 2.
-
+\bibitem{Eth18} Ethereum. {\em Solidity documentation.}\\
+{https://solidity.readthedocs.io/en/latest/index.html}. Truy cập lần cuối vào 11/6/2018.
 \end{thebibliography}
 \end{document}
