@@ -590,15 +590,16 @@ contract AuctionItem
     ) public
       onlyBy(owner) {
       	require(
-	    !ended, "Phien da ket thuc! Khong the thay doi!"
-	);
+      	    !ended, 
+      	    "Phien da ket thuc! Khong the thay doi!"
+      	);
         uint timeStamp = 
             dt.toTimestamp(year, month, day, hour, minute, second);
-	require(
-	    timeStamp > auctionEnd
-	    , "Thoi han moi khong lon hon thoi han ban dau!"
-	);
-	auctionEnd = timeStamp;
+	    require(
+	        timeStamp > auctionEnd, 
+	        "Thoi han moi khong lon hon thoi han ban dau!"
+	    );
+	    auctionEnd = timeStamp;
     }
 
     /// Dau gia voi so tien di kem giao dich nay.
@@ -659,8 +660,14 @@ contract AuctionItem
     /// gui ma vat pham cho nguoi thang cuoc.
     function auctionEnd() public {
         // 1. Conditions
-        require(now >= auctionEnd, "Phien dau gia chua ket thuc.");
-        require(!ended, "Phien dau gia khong hoat dong.");
+        require(
+            now >= auctionEnd, 
+            "Phien dau gia chua ket thuc."
+        );
+        require(
+            !ended, 
+            "Phien dau gia khong hoat dong."
+        );
 
         // 2. Effects
         ended = true;
