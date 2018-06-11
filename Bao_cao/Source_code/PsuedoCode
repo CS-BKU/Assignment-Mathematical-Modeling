@@ -1,0 +1,32 @@
+Algorithm 1: Chọn người trả giá cao hơn và hoàn tiền cho người trả
+             giá cao nhất trước đó. 
+input: highestBidder, highestBid, player
+       , newBiddingValue, timestamp_contract, ended
+output:
+if Converting system time to timestamp <= timestamp_contract 
+   & boolean(ended) = false then
+    if newBiddingValue > highestBid then
+        if exists(highestBidder) then
+            transfer money(highestBid) to the highestBidder;         
+        end
+        highestBidder = player;
+        highestBid = newBiddingValue;
+    end        
+end
+
+Algorithm 2: Giao dịch khi phiên đấu giá kết thúc.
+input: owner, highestBidder, highestBid, itemKey
+       , timestamp_contract, ended
+output:
+if Converting system time to timestamp >= timestamp_contract 
+   & boolean(ended) = false then
+    if exists(highestBidder) then
+        Transfer money(highestBid) to owner;
+        Transfer code(itemKey) to highestBidder;
+        Cancel the possession of the owner to the key;
+    else
+        Transfer code(itemKey) to owner;
+    end
+else 
+    Waiting for the auction to end;
+end 
