@@ -153,7 +153,7 @@ contract AuctionItem
     /// gui ma vat pham cho nguoi thang cuoc.
     function auctionEnd() public {
         // 1. Conditions
-        require(now >= auctionEnd, "Phien dau gia chu ket thuc.");
+        require(now >= auctionEnd, "Phien dau gia chua ket thuc.");
         require(!ended, "Phien dau gia khong hoat dong.");
 
         // 2. Effects
