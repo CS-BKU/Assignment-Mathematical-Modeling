@@ -89,12 +89,12 @@ contract AuctionItem
     {
         uint timeStamp = 
             dt.toTimestamp(year, month, day, hour, minute, second);
-		require(
-		    timeStamp > auctionEnd
-		    , "Thoi han moi khong lon hon thoi han ban dau!"
-		);
-		auctionEnd = timeStamp;
-	}
+	require(
+	    timeStamp > auctionEnd
+	    , "Thoi han moi khong lon hon thoi han ban dau!"
+	);
+	auctionEnd = timeStamp;
+    }
 
     /// Dau gia voi so tien di kem giao dich nay.
     /// Tien chi duoc hoan lai neu ban khong thang.
