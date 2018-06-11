@@ -85,8 +85,7 @@ contract AuctionItem
         uint8 minute,
         uint8 second
     ) public
-      onlyBy(owner)
-    {
+      onlyBy(owner) {
         uint timeStamp = 
             dt.toTimestamp(year, month, day, hour, minute, second);
 	require(
@@ -163,12 +162,12 @@ contract AuctionItem
 
         // 3. Interaction
         // Neu co nguoi dau gia
-		if (highestBid != defaultBid) {
-    		owner.transfer(highestBid);
-    		itemKey[highestBidder] = itemKey[owner];
-    		itemKey[owner] = "";
-		}
-		// else do nothing
-		// Thuc te thi he thong se tra lai vat pham cho nguoi dem no di dau gia.
+	if (highestBid != defaultBid) {
+	    owner.transfer(highestBid);
+	    itemKey[highestBidder] = itemKey[owner];
+	    itemKey[owner] = "";
+	}
+	// else do nothing
+	// Thuc te thi he thong se tra lai vat pham cho nguoi dem no di dau gia.
     }
 }
